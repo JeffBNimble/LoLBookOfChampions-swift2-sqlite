@@ -1,58 +1,30 @@
 PODS:
-  - Alamofire (1.2.2)
-  - Bolts (1.2.0):
-    - Bolts/AppLinks (= 1.2.0)
-    - Bolts/Tasks (= 1.2.0)
-  - Bolts/AppLinks (1.2.0):
-    - Bolts/Tasks
-  - Bolts/Tasks (1.2.0)
-  - FMDB (2.5):
-    - FMDB/standard (= 2.5)
-  - FMDB/common (2.5)
-  - FMDB/standard (2.5):
-    - FMDB/common
-  - Nimble (2.0.0-rc.1)
-  - Quick (0.4.0)
-  - Typhoon (3.1.9):
-    - Typhoon/no-arc (= 3.1.9)
-  - Typhoon/no-arc (3.1.9)
+  - AFNetworking (2.5.4):
+    - AFNetworking/NSURLConnection (= 2.5.4)
+    - AFNetworking/NSURLSession (= 2.5.4)
+    - AFNetworking/Reachability (= 2.5.4)
+    - AFNetworking/Security (= 2.5.4)
+    - AFNetworking/Serialization (= 2.5.4)
+    - AFNetworking/UIKit (= 2.5.4)
+  - AFNetworking/NSURLConnection (2.5.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.5.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.5.4)
+  - AFNetworking/Security (2.5.4)
+  - AFNetworking/Serialization (2.5.4)
+  - AFNetworking/UIKit (2.5.4):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
 
 DEPENDENCIES:
-  - Alamofire (from `https://github.com/Alamofire/Alamofire.git`, branch `swift-2.0`)
-  - Bolts (= 1.2.0)
-  - FMDB (= 2.5)
-  - Nimble (from `git@github.com:Quick/Nimble.git`, branch `swift-2.0`)
-  - Quick (from `git@github.com:Quick/Quick.git`, branch `swift-2.0`)
-  - Typhoon (= 3.1.9)
-
-EXTERNAL SOURCES:
-  Alamofire:
-    :branch: swift-2.0
-    :git: https://github.com/Alamofire/Alamofire.git
-  Nimble:
-    :branch: swift-2.0
-    :git: git@github.com:Quick/Nimble.git
-  Quick:
-    :branch: swift-2.0
-    :git: git@github.com:Quick/Quick.git
-
-CHECKOUT OPTIONS:
-  Alamofire:
-    :commit: 0b7f94659aa78d9687698597c1c60965b571791d
-    :git: https://github.com/Alamofire/Alamofire.git
-  Nimble:
-    :commit: fa73feeb156d8af7f47ae94dde07f1f7847bb1a3
-    :git: git@github.com:Quick/Nimble.git
-  Quick:
-    :commit: 003d74b0b00dc5b3bf5d166a0b2a64a6d70e8a59
-    :git: git@github.com:Quick/Quick.git
+  - AFNetworking (= 2.5.4)
 
 SPEC CHECKSUMS:
-  Alamofire: 11a6022f5089887d92ffb5a3014c97a0a915ab98
-  Bolts: d176cb1e0012175589e389a9db49b85e27787576
-  FMDB: 96e8f1bcc1329e269330f99770ad4285d9003e52
-  Nimble: 9572458605e65c9fc5a56754ab19a970f6ab5a88
-  Quick: 2286bfff349102670c6d2dafd0d2cefab42f5f0b
-  Typhoon: b48a0ba0023f7ebc92d8693f79d4985dc0f94d13
+  AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
 
-COCOAPODS: 0.37.2
+COCOAPODS: 0.38.2

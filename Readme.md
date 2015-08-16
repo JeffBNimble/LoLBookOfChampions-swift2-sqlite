@@ -37,7 +37,7 @@ All of my goals were met. Most of the code was written over a weekend. I plan on
 * [Typhoon](https://github.com/appsquickly/Typhoon) : A very nice dependency injection library for iOS/OSX (Objective-C and Swift)
 * [FMDB](https://github.com/ccgus/fmdb) : A clean and simple Objective-C wrapper around SQLite
 * [Alamofire](https://github.com/Alamofire/Alamofire) : The defacto standard networking library for Swift
-* [Bolts Framework](https://github.com/BoltsFramework/Bolts-iOS) : An implementation of [Futures and Promises](http://en.wikipedia.org/wiki/Futures_and_promises)
+* [Reactive Cocoa 3](https://github.com/ReactiveCocoa/ReactiveCocoa) : Functional Reactive Programming for iOS [ReactiveX.org](http://ReactiveX.org)
 * [CocoaLumberjack](https://github.com/CocoaLumberjack/CocoaLumberjack) : Logging (duh, what else do lumberjacks do?)
 * [SceneKit](https://developer.apple.com/library/ios/documentation/SceneKit/Reference/SceneKit_Framework/) : To add a little ambient magic to the application
 * [Quick](https://github.com/Quick/Quick)/[Nimble](https://github.com/Quick/Nimble) : If you write code, you better write tests
