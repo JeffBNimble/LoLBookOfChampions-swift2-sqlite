@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   DataDragon.plist
+   LoLBookOfChampions
+
+   Created by Jeff Roberts on 8/22/15.
+   Copyright (c) 2015 NimbleNoggin.io. All rights reserved.
+-->
+<plist version="1.0">
+    <dict>
+        <key>datadragon.api.key</key>
+        <string>b0984714-2747-48eb-8ea7-761af99a8a5f</string>
+        <key>datadragon.lol.region</key>
+        <string>na</string>
+        <key>datadragon.database.name</key>
+        <string>dataDragon.sqlite3</string>
+        <key>datadragon.contentAuthority</key>
+        <string>dataDragon</string>
+    </dict>
+</plist>

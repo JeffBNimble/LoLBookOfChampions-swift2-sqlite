@@ -7,4 +7,29 @@
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
+   <Group
+      location = "container:"
+      name = "Frameworks">
+      <FileRef
+         location = "group:Carthage/Checkouts/lol-datadragon-content-provider/LoLDataDragonContentProvider.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Carthage/Checkouts/ReactiveCocoa/ReactiveCocoa.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Carthage/Checkouts/Result/Result.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Carthage/Checkouts/swift-adapters-fmdb/SwiftAdaptersFMDB.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Carthage/Checkouts/swift-content-provider/SwiftContentProvider.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Carthage/Checkouts/swift-protocols-core/SwiftProtocolsCore.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Carthage/Checkouts/swift-protocols-sqlite/SwiftProtocolsSQLite.xcodeproj">
+      </FileRef>
+   </Group>
 </Workspace>

@@ -7,15 +7,22 @@
 //
 
 import UIKit
+import CocoaLumberjackSwift
+import SwiftContentProvider
+import LoLDataDragonContentProvider
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
-
+    var loggers : [DDLogger]?
+    var contentResolver : ContentResolver!
+    var dataDragon : DataDragon!
+    var dataDragonDispatchQueue : dispatch_queue_t!
+    var window : UIWindow?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        self.initializeApplication()
+        DDLogInfo("The application has been initialized")
         return true
     }
 
@@ -40,7 +47,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    private func initializeApplication() {
+        self.initializeLogger()
+        self.initializeApplicationURLCache()
+        self.syncDataDragon()
+    }
+    
+    private func initializeApplicationURLCache() {
+        let urlCache = NSURLCache(memoryCapacity: 2 * 1024 * 1024, diskCapacity: 400 * 1024 * 1024, diskPath: "championImageCache")
+        NSURLCache.setSharedURLCache(urlCache)
+    }
+    
+    private func initializeLogger() {
+        guard let loggers = loggers else {
+            return
+        }
+        
+        loggers.forEach() { logger in
+            DDLog.addLogger(logger)
+        }
+    }
 
+    private func syncDataDragon() {
+        self.dataDragonDispatchQueue = dispatch_queue_create("io.nimbleNoggin.LoLBookOfChampions.dataDragon", DISPATCH_QUEUE_SERIAL)
+        
+        dispatch_async(self.dataDragonDispatchQueue, {
+            do {
+                try self.dataDragon.sync()
+            } catch {
+                DDLogError("An error occurred attempting to sync Data Dragon: \(error)")
+            }
+        })
+    }
 
 }
 

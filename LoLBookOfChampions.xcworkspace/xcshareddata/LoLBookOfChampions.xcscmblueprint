@@ -1,0 +1,51 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "10349400A8283703724472FF9091E936EAC48BB4",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "EDBA29D080896243BF26F31931E9503E2FA9DA06" : 0,
+    "F0912E68F6F8E7CAF3468EC655FB9A9179D4BCD0" : 0,
+    "8059D7980F00D6B12CD92DC5F08AAF3DC111AF33" : 0,
+    "10349400A8283703724472FF9091E936EAC48BB4" : 0,
+    "5756DF5E909C3619077EAAC288E945996ED779E6" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "D61BA6D4-4795-4DEB-8D32-CB146113E89A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "EDBA29D080896243BF26F31931E9503E2FA9DA06" : "swift-content-provider\/",
+    "F0912E68F6F8E7CAF3468EC655FB9A9179D4BCD0" : "swift-adapters-fmdb\/",
+    "8059D7980F00D6B12CD92DC5F08AAF3DC111AF33" : "swift-protocols-core\/",
+    "10349400A8283703724472FF9091E936EAC48BB4" : "LoLBookOfChampions-swift2-sqlite\/",
+    "5756DF5E909C3619077EAAC288E945996ED779E6" : "swift-protocols-sqlite\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "LoLBookOfChampions",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "LoLBookOfChampions.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:JeffBNimble\/LoLBookOfChampions-swift2-sqlite.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "10349400A8283703724472FF9091E936EAC48BB4"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:JeffBNimble\/swift-protocols-sqlite.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5756DF5E909C3619077EAAC288E945996ED779E6"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:JeffBNimble\/swift-protocols-core.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8059D7980F00D6B12CD92DC5F08AAF3DC111AF33"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:JeffBNimble\/swift-content-provider.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "EDBA29D080896243BF26F31931E9503E2FA9DA06"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:JeffBNimble\/swift-adapters-fmdb.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F0912E68F6F8E7CAF3468EC655FB9A9179D4BCD0"
+    }
+  ]
+}

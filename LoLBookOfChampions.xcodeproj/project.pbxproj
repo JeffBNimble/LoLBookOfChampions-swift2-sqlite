@@ -14,7 +14,6 @@
 		A5771ADE1B80BC8D00CD4E70 /* LoLDataDragonContentProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5771AD21B80BC8D00CD4E70 /* LoLDataDragonContentProvider.framework */; };
 		A5771ADF1B80BC8D00CD4E70 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5771AD31B80BC8D00CD4E70 /* ReactiveCocoa.framework */; };
 		A5771AE01B80BC8D00CD4E70 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5771AD41B80BC8D00CD4E70 /* Result.framework */; };
-		A5771AE11B80BC8D00CD4E70 /* SwiftAdaptersFMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5771AD51B80BC8D00CD4E70 /* SwiftAdaptersFMDB.framework */; };
 		A5771AE21B80BC8D00CD4E70 /* SwiftContentProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5771AD61B80BC8D00CD4E70 /* SwiftContentProvider.framework */; };
 		A5771AE31B80BC8D00CD4E70 /* SwiftProtocolsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5771AD71B80BC8D00CD4E70 /* SwiftProtocolsCore.framework */; };
 		A5771AE41B80BC8D00CD4E70 /* SwiftProtocolsSQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5771AD81B80BC8D00CD4E70 /* SwiftProtocolsSQLite.framework */; };
@@ -34,6 +33,18 @@
 		A5771B011B80C46D00CD4E70 /* Typhoon.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5771AF51B80C46D00CD4E70 /* Typhoon.framework.dSYM */; };
 		A5771B061B80E74200CD4E70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5771B051B80E74200CD4E70 /* Foundation.framework */; };
 		A5771B091B80ED0100CD4E70 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5771B081B80ED0100CD4E70 /* Images.xcassets */; };
+		A5771B0D1B8127E400CD4E70 /* ChampionCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5771B0C1B8127E400CD4E70 /* ChampionCollectionViewController.swift */; };
+		A5771B0F1B81292C00CD4E70 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5771B0E1B81292C00CD4E70 /* SceneKit.framework */; };
+		A5771B111B81298500CD4E70 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5771B101B81298500CD4E70 /* SpriteKit.framework */; };
+		A5771B131B81353D00CD4E70 /* magic.sks in Resources */ = {isa = PBXBuildFile; fileRef = A5771B121B81353D00CD4E70 /* magic.sks */; };
+		A5771B161B8135F100CD4E70 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = A5771B141B8135F100CD4E70 /* spark.png */; };
+		A5771B171B8135F100CD4E70 /* spark.sks in Resources */ = {isa = PBXBuildFile; fileRef = A5771B151B8135F100CD4E70 /* spark.sks */; };
+		A5771B191B81546600CD4E70 /* ApplicationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5771B181B81546600CD4E70 /* ApplicationAssembly.swift */; };
+		A5771B1B1B81549600CD4E70 /* DataDragonAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5771B1A1B81549600CD4E70 /* DataDragonAssembly.swift */; };
+		A5771B1D1B8154CE00CD4E70 /* CoreAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5771B1C1B8154CE00CD4E70 /* CoreAssembly.swift */; };
+		A59F55471B881D3C00022E74 /* SwiftAdaptersFMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A53C34BF1B8816E500786EAD /* SwiftAdaptersFMDB.framework */; };
+		A59F554C1B88AAE000022E74 /* TyphoonContentProviderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59F554B1B88AAE000022E74 /* TyphoonContentProviderFactory.swift */; };
+		A59F554F1B88BEDF00022E74 /* DataDragon.plist in Resources */ = {isa = PBXBuildFile; fileRef = A59F554E1B88BEDF00022E74 /* DataDragon.plist */; };
 		A5D3B0971B2FBE8300693C09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D3B0961B2FBE8300693C09 /* AppDelegate.swift */; };
 		A5D3B0991B2FBE8300693C09 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D3B0981B2FBE8300693C09 /* ViewController.swift */; };
 		A5D3B09C1B2FBE8300693C09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5D3B09A1B2FBE8300693C09 /* Main.storyboard */; };
@@ -43,6 +54,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		A53C34BE1B8816E500786EAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A53C34B91B8816E500786EAD /* SwiftAdaptersFMDB.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A53D108F1B5B45990071984E;
+			remoteInfo = SwiftAdaptersFMDB;
+		};
+		A53C34C01B8816E500786EAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A53C34B91B8816E500786EAD /* SwiftAdaptersFMDB.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A53D10991B5B45990071984E;
+			remoteInfo = SwiftAdaptersFMDBTests;
+		};
 		A5D3B0A71B2FBE8300693C09 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A5D3B0891B2FBE8300693C09 /* Project object */;
@@ -82,13 +107,13 @@
 		817912CE85F853832185BD36 /* Pods-LoLBookOfChampionsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoLBookOfChampionsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoLBookOfChampionsTests/Pods-LoLBookOfChampionsTests.release.xcconfig"; sourceTree = "<group>"; };
 		96DEE882BA24069F3C3EB983 /* Pods-LoLBookOfChampions.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoLBookOfChampions.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoLBookOfChampions/Pods-LoLBookOfChampions.release.xcconfig"; sourceTree = "<group>"; };
 		A1761F2F276F64DA245B5BFD /* Pods_LoLBookOfChampionsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoLBookOfChampionsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A53C34B91B8816E500786EAD /* SwiftAdaptersFMDB.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftAdaptersFMDB.xcodeproj; path = "Carthage/Checkouts/swift-adapters-fmdb/SwiftAdaptersFMDB.xcodeproj"; sourceTree = "<group>"; };
 		A5771ACE1B80BC8D00CD4E70 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		A5771AD01B80BC8D00CD4E70 /* CocoaLumberjackSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjackSwift.framework; path = Carthage/Build/iOS/CocoaLumberjackSwift.framework; sourceTree = "<group>"; };
 		A5771AD11B80BC8D00CD4E70 /* fmdbframework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = fmdbframework.framework; path = Carthage/Build/iOS/fmdbframework.framework; sourceTree = "<group>"; };
 		A5771AD21B80BC8D00CD4E70 /* LoLDataDragonContentProvider.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LoLDataDragonContentProvider.framework; path = Carthage/Build/iOS/LoLDataDragonContentProvider.framework; sourceTree = "<group>"; };
 		A5771AD31B80BC8D00CD4E70 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		A5771AD41B80BC8D00CD4E70 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
-		A5771AD51B80BC8D00CD4E70 /* SwiftAdaptersFMDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftAdaptersFMDB.framework; path = Carthage/Build/iOS/SwiftAdaptersFMDB.framework; sourceTree = "<group>"; };
 		A5771AD61B80BC8D00CD4E70 /* SwiftContentProvider.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftContentProvider.framework; path = Carthage/Build/iOS/SwiftContentProvider.framework; sourceTree = "<group>"; };
 		A5771AD71B80BC8D00CD4E70 /* SwiftProtocolsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftProtocolsCore.framework; path = Carthage/Build/iOS/SwiftProtocolsCore.framework; sourceTree = "<group>"; };
 		A5771AD81B80BC8D00CD4E70 /* SwiftProtocolsSQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftProtocolsSQLite.framework; path = Carthage/Build/iOS/SwiftProtocolsSQLite.framework; sourceTree = "<group>"; };
@@ -108,6 +133,19 @@
 		A5771AF51B80C46D00CD4E70 /* Typhoon.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Typhoon.framework.dSYM; path = Carthage/Build/iOS/Typhoon.framework.dSYM; sourceTree = "<group>"; };
 		A5771B051B80E74200CD4E70 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A5771B081B80ED0100CD4E70 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A5771B0C1B8127E400CD4E70 /* ChampionCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChampionCollectionViewController.swift; sourceTree = "<group>"; };
+		A5771B0E1B81292C00CD4E70 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
+		A5771B101B81298500CD4E70 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		A5771B121B81353D00CD4E70 /* magic.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = magic.sks; path = LoLBookOfChampions/resources/magic.sks; sourceTree = SOURCE_ROOT; };
+		A5771B141B8135F100CD4E70 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spark.png; path = LoLBookOfChampions/resources/spark.png; sourceTree = SOURCE_ROOT; };
+		A5771B151B8135F100CD4E70 /* spark.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = spark.sks; path = LoLBookOfChampions/resources/spark.sks; sourceTree = SOURCE_ROOT; };
+		A5771B181B81546600CD4E70 /* ApplicationAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationAssembly.swift; sourceTree = "<group>"; };
+		A5771B1A1B81549600CD4E70 /* DataDragonAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataDragonAssembly.swift; sourceTree = "<group>"; };
+		A5771B1C1B8154CE00CD4E70 /* CoreAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreAssembly.swift; sourceTree = "<group>"; };
+		A579BE241B87C0810085AA24 /* LoLBookOfChampions-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LoLBookOfChampions-Bridging-Header.h"; sourceTree = "<group>"; };
+		A59F55451B881D2700022E74 /* SwiftAdaptersFMDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftAdaptersFMDB.framework; path = Carthage/Build/iOS/SwiftAdaptersFMDB.framework; sourceTree = "<group>"; };
+		A59F554B1B88AAE000022E74 /* TyphoonContentProviderFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TyphoonContentProviderFactory.swift; sourceTree = "<group>"; };
+		A59F554E1B88BEDF00022E74 /* DataDragon.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DataDragon.plist; sourceTree = "<group>"; };
 		A5D3B0911B2FBE8300693C09 /* LoLBookOfChampions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoLBookOfChampions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5D3B0951B2FBE8300693C09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5D3B0961B2FBE8300693C09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -125,14 +163,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A59F55471B881D3C00022E74 /* SwiftAdaptersFMDB.framework in Frameworks */,
 				A5771B061B80E74200CD4E70 /* Foundation.framework in Frameworks */,
+				A5771B0F1B81292C00CD4E70 /* SceneKit.framework in Frameworks */,
+				A5771B111B81298500CD4E70 /* SpriteKit.framework in Frameworks */,
 				A5771AE31B80BC8D00CD4E70 /* SwiftProtocolsCore.framework in Frameworks */,
 				A5771ADE1B80BC8D00CD4E70 /* LoLDataDragonContentProvider.framework in Frameworks */,
 				A5771AE41B80BC8D00CD4E70 /* SwiftProtocolsSQLite.framework in Frameworks */,
 				A5771ADC1B80BC8D00CD4E70 /* CocoaLumberjackSwift.framework in Frameworks */,
 				A5771ADD1B80BC8D00CD4E70 /* fmdbframework.framework in Frameworks */,
 				A5771AE01B80BC8D00CD4E70 /* Result.framework in Frameworks */,
-				A5771AE11B80BC8D00CD4E70 /* SwiftAdaptersFMDB.framework in Frameworks */,
 				A5771AE21B80BC8D00CD4E70 /* SwiftContentProvider.framework in Frameworks */,
 				A5771AE51B80BC8D00CD4E70 /* Typhoon.framework in Frameworks */,
 				10E5B38686FC366FE0740254 /* Pods_LoLBookOfChampions.framework in Frameworks */,
@@ -156,6 +196,7 @@
 		6E54EF91259F91CA1505B97D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				A53C34B91B8816E500786EAD /* SwiftAdaptersFMDB.xcodeproj */,
 				140A812125737AA6AC7B06C1 /* Pods-LoLBookOfChampions.debug.xcconfig */,
 				96DEE882BA24069F3C3EB983 /* Pods-LoLBookOfChampions.release.xcconfig */,
 				DB1ED2ECF917FF3716FDBB22 /* Pods-LoLBookOfChampionsTests.debug.xcconfig */,
@@ -164,12 +205,47 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		A5771B071B80ED0100CD4E70 /* Resources */ = {
+		A53C34BA1B8816E500786EAD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A53C34BF1B8816E500786EAD /* SwiftAdaptersFMDB.framework */,
+				A53C34C11B8816E500786EAD /* SwiftAdaptersFMDBTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A5771B071B80ED0100CD4E70 /* resources */ = {
 			isa = PBXGroup;
 			children = (
 				A5771B081B80ED0100CD4E70 /* Images.xcassets */,
+				A5771B121B81353D00CD4E70 /* magic.sks */,
+				A5771B141B8135F100CD4E70 /* spark.png */,
+				A5771B151B8135F100CD4E70 /* spark.sks */,
 			);
+			name = resources;
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		A5771B0A1B81267600CD4E70 /* module */ = {
+			isa = PBXGroup;
+			children = (
+				A5771B181B81546600CD4E70 /* ApplicationAssembly.swift */,
+				A5771B1C1B8154CE00CD4E70 /* CoreAssembly.swift */,
+				A5771B1A1B81549600CD4E70 /* DataDragonAssembly.swift */,
+				A59F554B1B88AAE000022E74 /* TyphoonContentProviderFactory.swift */,
+				A59F554E1B88BEDF00022E74 /* DataDragon.plist */,
+			);
+			path = module;
+			sourceTree = "<group>";
+		};
+		A5771B0B1B81267600CD4E70 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				A5D3B09F1B2FBE8300693C09 /* LaunchScreen.xib */,
+				A5D3B09A1B2FBE8300693C09 /* Main.storyboard */,
+				A5771B0C1B8127E400CD4E70 /* ChampionCollectionViewController.swift */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		A5D3B0881B2FBE8300693C09 = {
@@ -207,12 +283,12 @@
 		A5D3B0931B2FBE8300693C09 /* LoLBookOfChampions */ = {
 			isa = PBXGroup;
 			children = (
-				A5771B071B80ED0100CD4E70 /* Resources */,
+				A5771B0A1B81267600CD4E70 /* module */,
+				A5771B0B1B81267600CD4E70 /* view */,
+				A5771B071B80ED0100CD4E70 /* resources */,
+				A5D3B0941B2FBE8300693C09 /* Supporting Files */,
 				A5D3B0961B2FBE8300693C09 /* AppDelegate.swift */,
 				A5D3B0981B2FBE8300693C09 /* ViewController.swift */,
-				A5D3B09A1B2FBE8300693C09 /* Main.storyboard */,
-				A5D3B09F1B2FBE8300693C09 /* LaunchScreen.xib */,
-				A5D3B0941B2FBE8300693C09 /* Supporting Files */,
 			);
 			path = LoLBookOfChampions;
 			sourceTree = "<group>";
@@ -221,6 +297,7 @@
 			isa = PBXGroup;
 			children = (
 				A5D3B0951B2FBE8300693C09 /* Info.plist */,
+				A579BE241B87C0810085AA24 /* LoLBookOfChampions-Bridging-Header.h */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -245,6 +322,9 @@
 		D21DCE71F4088158E1B3EFD3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A59F55451B881D2700022E74 /* SwiftAdaptersFMDB.framework */,
+				A5771B101B81298500CD4E70 /* SpriteKit.framework */,
+				A5771B0E1B81292C00CD4E70 /* SceneKit.framework */,
 				A5771B051B80E74200CD4E70 /* Foundation.framework */,
 				16DABBDBFE2F5D83BED1E4F2 /* Pods_LoLBookOfChampions.framework */,
 				A1761F2F276F64DA245B5BFD /* Pods_LoLBookOfChampionsTests.framework */,
@@ -255,7 +335,6 @@
 				A5771AD21B80BC8D00CD4E70 /* LoLDataDragonContentProvider.framework */,
 				A5771AD31B80BC8D00CD4E70 /* ReactiveCocoa.framework */,
 				A5771AD41B80BC8D00CD4E70 /* Result.framework */,
-				A5771AD51B80BC8D00CD4E70 /* SwiftAdaptersFMDB.framework */,
 				A5771AD61B80BC8D00CD4E70 /* SwiftContentProvider.framework */,
 				A5771AD71B80BC8D00CD4E70 /* SwiftProtocolsCore.framework */,
 				A5771AD81B80BC8D00CD4E70 /* SwiftProtocolsSQLite.framework */,
@@ -340,6 +419,12 @@
 			mainGroup = A5D3B0881B2FBE8300693C09;
 			productRefGroup = A5D3B0921B2FBE8300693C09 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A53C34BA1B8816E500786EAD /* Products */;
+					ProjectRef = A53C34B91B8816E500786EAD /* SwiftAdaptersFMDB.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				A5D3B0901B2FBE8300693C09 /* LoLBookOfChampions */,
@@ -348,12 +433,33 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		A53C34BF1B8816E500786EAD /* SwiftAdaptersFMDB.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftAdaptersFMDB.framework;
+			remoteRef = A53C34BE1B8816E500786EAD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A53C34C11B8816E500786EAD /* SwiftAdaptersFMDBTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SwiftAdaptersFMDBTests.xctest;
+			remoteRef = A53C34C01B8816E500786EAD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		A5D3B08F1B2FBE8300693C09 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5771B161B8135F100CD4E70 /* spark.png in Resources */,
+				A5771B171B8135F100CD4E70 /* spark.sks in Resources */,
 				A5D3B09C1B2FBE8300693C09 /* Main.storyboard in Resources */,
+				A59F554F1B88BEDF00022E74 /* DataDragon.plist in Resources */,
+				A5771B131B81353D00CD4E70 /* magic.sks in Resources */,
 				A5771B091B80ED0100CD4E70 /* Images.xcassets in Resources */,
 				A5D3B0A11B2FBE8300693C09 /* LaunchScreen.xib in Resources */,
 			);
@@ -436,7 +542,6 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Box.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/CocoaLumberjackSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/fmdbframework.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/LoLDataDragonContentProvider.framework",
@@ -492,7 +597,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5771B1D1B8154CE00CD4E70 /* CoreAssembly.swift in Sources */,
 				A5D3B0991B2FBE8300693C09 /* ViewController.swift in Sources */,
+				A5771B1B1B81549600CD4E70 /* DataDragonAssembly.swift in Sources */,
+				A59F554C1B88AAE000022E74 /* TyphoonContentProviderFactory.swift in Sources */,
+				A5771B191B81546600CD4E70 /* ApplicationAssembly.swift in Sources */,
+				A5771B0D1B8127E400CD4E70 /* ChampionCollectionViewController.swift in Sources */,
 				A5D3B0971B2FBE8300693C09 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -522,6 +632,7 @@
 				A5D3B09B1B2FBE8300693C09 /* Base */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		A5D3B09F1B2FBE8300693C09 /* LaunchScreen.xib */ = {
@@ -530,6 +641,7 @@
 				A5D3B0A01B2FBE8300693C09 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -626,11 +738,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/**",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "LoLBookOfChampions/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LoLBookOfChampions/Supporting Files/LoLBookOfChampions-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -642,11 +756,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/**",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "LoLBookOfChampions/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LoLBookOfChampions/Supporting Files/LoLBookOfChampions-Bridging-Header.h";
 			};
 			name = Release;
 		};

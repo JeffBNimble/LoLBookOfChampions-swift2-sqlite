@@ -36,6 +36,12 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>TyphoonInitialAssemblies</key>
+	<array>
+		<string>ApplicationAssembly</string>
+		<string>CoreAssembly</string>
+		<string>DataDragonAssembly</string>
+	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
