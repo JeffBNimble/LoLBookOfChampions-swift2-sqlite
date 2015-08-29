@@ -8,16 +8,32 @@
 
 import UIKit
 import CocoaLumberjackSwift
-import SwiftContentProvider
 import LoLDataDragonContentProvider
+import ReactiveCocoa
+import SwiftContentProvider
+import SwiftProtocolsSQLite
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var loggers : [DDLogger]?
+    var backgroundQueue : dispatch_queue_t! {
+        didSet {
+            self.backgroundScheduler = QueueScheduler(queue: backgroundQueue, name: "io.nimblenoggin.lolbookofchampions.background_queue")
+        }
+    }
+    
+    private var backgroundScheduler : QueueScheduler!
     var contentResolver : ContentResolver!
+    var dataDragonDatabaseQueue : dispatch_queue_t! {
+        didSet {
+            self.dataDragonDatabaseScheduler = QueueScheduler(queue: dataDragonDatabaseQueue, name: "io.nimblenoggin.lolbookofchampions.datadragon.database_queue")
+        }
+    }
+    
+    private var dataDragonDatabaseScheduler : QueueScheduler!
     var dataDragon : DataDragon!
-    var dataDragonDispatchQueue : dispatch_queue_t!
+    var loggers : [DDLogger]?
     var window : UIWindow?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -48,6 +64,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     
+    func getBackgroundScheduler() -> QueueScheduler {
+        return backgroundScheduler
+    }
+    
+    func getDataDragonDatabaseScheduler() -> QueueScheduler {
+        return dataDragonDatabaseScheduler
+    }
+    
     private func initializeApplication() {
         self.initializeLogger()
         self.initializeApplicationURLCache()
@@ -70,14 +94,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func syncDataDragon() {
-        self.dataDragonDispatchQueue = dispatch_queue_create("io.nimbleNoggin.LoLBookOfChampions.dataDragon", DISPATCH_QUEUE_SERIAL)
-        
-        dispatch_async(self.dataDragonDispatchQueue, {
-            do {
-                try self.dataDragon.sync()
-            } catch {
-                DDLogError("An error occurred attempting to sync Data Dragon: \(error)")
-            }
+        dispatch_async(backgroundQueue, {
+            Action<Void, Void, SQLError>() { input in
+                return SignalProducer<Void, SQLError>() { observer, disposable in
+                    do {
+                        try self.dataDragon.sync()
+                    } catch {
+                        DDLogError("An error occurred attempting to sync Data Dragon: \(error)")
+                        sendError(observer, error as! SQLError)
+                    }
+                    sendCompleted(observer)
+                }
+                }
+                .apply(())
+                .start(completed: {
+                    DDLogInfo("Completed data dragon sync")
+                })
         })
     }
 

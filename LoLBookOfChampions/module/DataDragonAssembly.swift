@@ -30,7 +30,7 @@ class DataDragonAssembly : TyphoonAssembly {
     
     dynamic func dataDragon() -> AnyObject {
         return TyphoonDefinition.withClass(DataDragon.self) { definition in
-            definition.useInitializer("initWithDatabaseFactory:contentResolver:apiKey:contentAuthority:urlCache:databaseName:region:databaseDispatchQueue:") { initializer in
+            definition.useInitializer("initWithDatabaseFactory:contentResolver:apiKey:contentAuthorityBase:urlCache:databaseName:region:databaseDispatchQueue:") { initializer in
                 initializer.injectParameterWith(self.databaseFactory())
                 initializer.injectParameterWith(self.core.contentResolver())
                 initializer.injectParameterWith(TyphoonConfig("datadragon.api.key"))
@@ -38,15 +38,7 @@ class DataDragonAssembly : TyphoonAssembly {
                 initializer.injectParameterWith(self.core.sharedURLCache())
                 initializer.injectParameterWith(TyphoonConfig("datadragon.database.name"))
                 initializer.injectParameterWith(TyphoonConfig("datadragon.lol.region"))
-                initializer.injectParameterWith(nil) // Database dispatch queue
-            }
-        }
-    }
-
-    dynamic func dataDragonContentProvider() -> AnyObject {
-        return TyphoonDefinition.withClass(DataDragonContentProvider.self) { definition in
-            definition.useInitializer("initWithDatabase:") { initializer in
-                initializer.injectParameterWith(self.dataDragonDatabase())
+                initializer.injectParameterWith(dataDragonDatabaseQueue) // Database dispatch queue
             }
         }
     }

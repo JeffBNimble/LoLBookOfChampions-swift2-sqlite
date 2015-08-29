@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8173.3" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="wKm-de-UgM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="wKm-de-UgM">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="Y23-YA-mPa">
             <objects>
                 <navigationController id="wKm-de-UgM" sceneMemberID="viewController">
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="guc-hY-nv2">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="guc-hY-nv2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -26,25 +28,50 @@
         <scene sceneID="1nu-GH-NLH">
             <objects>
                 <collectionViewController title="LoL Champion Browser" id="EWa-hK-awq" customClass="ChampionCollectionViewController" customModule="LoLBookOfChampions" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="MEb-o9-3Z5">
-                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" dataMode="prototypes" id="MEb-o9-3Z5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5Y2-T9-UZY">
-                            <size key="itemSize" width="50" height="50"/>
+                            <size key="itemSize" width="84" height="114"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="13B-w0-YP3">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="championCell" id="13B-w0-YP3" customClass="ChampionCell" customModule="LoLBookOfChampions" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="84" height="114"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="84" height="114"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nUx-2g-1ZJ">
+                                            <rect key="frame" x="5" y="3" width="74" height="74"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="nUx-2g-1ZJ" secondAttribute="height" id="aI1-az-CXq"/>
+                                                <constraint firstAttribute="width" constant="74" id="i1f-rN-UKg"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obt-jq-Bj1" userLabel="Champion Name">
+                                            <rect key="frame" x="42" y="111" width="0.0" height="0.0"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <constraints>
+                                    <constraint firstAttribute="topMargin" secondItem="nUx-2g-1ZJ" secondAttribute="top" constant="5" id="9Vz-zZ-KTv"/>
+                                    <constraint firstItem="nUx-2g-1ZJ" firstAttribute="centerX" secondItem="13B-w0-YP3" secondAttribute="centerX" id="Olp-C3-eRN"/>
+                                    <constraint firstItem="obt-jq-Bj1" firstAttribute="centerX" secondItem="13B-w0-YP3" secondAttribute="centerX" id="cV8-eb-01W"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="obt-jq-Bj1" secondAttribute="bottom" constant="5" id="l1m-qQ-Pha"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="championImageView" destination="nUx-2g-1ZJ" id="3NR-Q6-uYd"/>
+                                    <outlet property="championNameLabel" destination="obt-jq-Bj1" id="Az1-u1-XBp"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -53,7 +80,7 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="LoL Champion Browser" id="QT1-mi-38t"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <connections>
                         <outlet property="collectionView" destination="MEb-o9-3Z5" id="QYF-2q-LBV"/>
                     </connections>

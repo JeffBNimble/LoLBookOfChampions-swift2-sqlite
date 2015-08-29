@@ -39,8 +39,8 @@ class CoreAssembly : TyphoonAssembly {
         return TyphoonDefinition.withClass(ContentResolver.self) { definition in
             definition.useInitializer("initWithContentProviderFactory:contentAuthorityBase:contentRegistrations:") { initializer in
                 initializer.injectParameterWith(self.contentProviderFactory())
-                initializer.injectParameterWith("io.nimblenoggin.LoLBookOfChampions.dataDragon") // TODO Fix this
-                initializer.injectParameterWith(["dataDragon" : DataDragonContentProvider.self]) // TODO Fix this
+                initializer.injectParameterWith(self.bundleIdentifier())
+                initializer.injectParameterWith([DataDragon.contentAuthority : DataDragonContentProvider.self])
             }
         }
     }

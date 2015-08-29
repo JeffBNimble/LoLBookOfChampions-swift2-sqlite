@@ -10,5 +10,6 @@
 #define LoLBookOfChampions_Bridging_Header_h
 
 #import <Typhoon/Typhoon.h>
+#import <AFNetworking/AFNetworking.h>
 
 #endif /* LoLBookOfChampions_Bridging_Header_h */

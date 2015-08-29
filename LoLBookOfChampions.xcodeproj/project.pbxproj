@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		10E5B38686FC366FE0740254 /* Pods_LoLBookOfChampions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DABBDBFE2F5D83BED1E4F2 /* Pods_LoLBookOfChampions.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		A50B42BD1B8F2373007CD2AC /* Signals.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50B42BC1B8F2373007CD2AC /* Signals.swift */; settings = {ASSET_TAGS = (); }; };
 		A5771ADA1B80BC8D00CD4E70 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5771ACE1B80BC8D00CD4E70 /* Alamofire.framework */; };
 		A5771ADC1B80BC8D00CD4E70 /* CocoaLumberjackSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5771AD01B80BC8D00CD4E70 /* CocoaLumberjackSwift.framework */; };
 		A5771ADD1B80BC8D00CD4E70 /* fmdbframework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5771AD11B80BC8D00CD4E70 /* fmdbframework.framework */; };
@@ -46,7 +47,6 @@
 		A59F554C1B88AAE000022E74 /* TyphoonContentProviderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59F554B1B88AAE000022E74 /* TyphoonContentProviderFactory.swift */; };
 		A59F554F1B88BEDF00022E74 /* DataDragon.plist in Resources */ = {isa = PBXBuildFile; fileRef = A59F554E1B88BEDF00022E74 /* DataDragon.plist */; };
 		A5D3B0971B2FBE8300693C09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D3B0961B2FBE8300693C09 /* AppDelegate.swift */; };
-		A5D3B0991B2FBE8300693C09 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D3B0981B2FBE8300693C09 /* ViewController.swift */; };
 		A5D3B09C1B2FBE8300693C09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5D3B09A1B2FBE8300693C09 /* Main.storyboard */; };
 		A5D3B0A11B2FBE8300693C09 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5D3B09F1B2FBE8300693C09 /* LaunchScreen.xib */; };
 		A5D3B0AD1B2FBE8300693C09 /* LoLBookOfChampionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D3B0AC1B2FBE8300693C09 /* LoLBookOfChampionsTests.swift */; };
@@ -107,6 +107,7 @@
 		817912CE85F853832185BD36 /* Pods-LoLBookOfChampionsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoLBookOfChampionsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoLBookOfChampionsTests/Pods-LoLBookOfChampionsTests.release.xcconfig"; sourceTree = "<group>"; };
 		96DEE882BA24069F3C3EB983 /* Pods-LoLBookOfChampions.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoLBookOfChampions.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoLBookOfChampions/Pods-LoLBookOfChampions.release.xcconfig"; sourceTree = "<group>"; };
 		A1761F2F276F64DA245B5BFD /* Pods_LoLBookOfChampionsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoLBookOfChampionsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A50B42BC1B8F2373007CD2AC /* Signals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signals.swift; sourceTree = "<group>"; };
 		A53C34B91B8816E500786EAD /* SwiftAdaptersFMDB.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftAdaptersFMDB.xcodeproj; path = "Carthage/Checkouts/swift-adapters-fmdb/SwiftAdaptersFMDB.xcodeproj"; sourceTree = "<group>"; };
 		A5771ACE1B80BC8D00CD4E70 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		A5771AD01B80BC8D00CD4E70 /* CocoaLumberjackSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjackSwift.framework; path = Carthage/Build/iOS/CocoaLumberjackSwift.framework; sourceTree = "<group>"; };
@@ -149,7 +150,6 @@
 		A5D3B0911B2FBE8300693C09 /* LoLBookOfChampions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoLBookOfChampions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5D3B0951B2FBE8300693C09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5D3B0961B2FBE8300693C09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A5D3B0981B2FBE8300693C09 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A5D3B09B1B2FBE8300693C09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A5D3B0A01B2FBE8300693C09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		A5D3B0A61B2FBE8300693C09 /* LoLBookOfChampionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoLBookOfChampionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -205,6 +205,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A50B42BB1B8DD176007CD2AC /* util */ = {
+			isa = PBXGroup;
+			children = (
+				A50B42BC1B8F2373007CD2AC /* Signals.swift */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
 		A53C34BA1B8816E500786EAD /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,9 +239,9 @@
 			children = (
 				A5771B181B81546600CD4E70 /* ApplicationAssembly.swift */,
 				A5771B1C1B8154CE00CD4E70 /* CoreAssembly.swift */,
+				A59F554E1B88BEDF00022E74 /* DataDragon.plist */,
 				A5771B1A1B81549600CD4E70 /* DataDragonAssembly.swift */,
 				A59F554B1B88AAE000022E74 /* TyphoonContentProviderFactory.swift */,
-				A59F554E1B88BEDF00022E74 /* DataDragon.plist */,
 			);
 			path = module;
 			sourceTree = "<group>";
@@ -284,11 +292,11 @@
 			isa = PBXGroup;
 			children = (
 				A5771B0A1B81267600CD4E70 /* module */,
-				A5771B0B1B81267600CD4E70 /* view */,
 				A5771B071B80ED0100CD4E70 /* resources */,
 				A5D3B0941B2FBE8300693C09 /* Supporting Files */,
+				A50B42BB1B8DD176007CD2AC /* util */,
+				A5771B0B1B81267600CD4E70 /* view */,
 				A5D3B0961B2FBE8300693C09 /* AppDelegate.swift */,
-				A5D3B0981B2FBE8300693C09 /* ViewController.swift */,
 			);
 			path = LoLBookOfChampions;
 			sourceTree = "<group>";
@@ -598,7 +606,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5771B1D1B8154CE00CD4E70 /* CoreAssembly.swift in Sources */,
-				A5D3B0991B2FBE8300693C09 /* ViewController.swift in Sources */,
+				A50B42BD1B8F2373007CD2AC /* Signals.swift in Sources */,
 				A5771B1B1B81549600CD4E70 /* DataDragonAssembly.swift in Sources */,
 				A59F554C1B88AAE000022E74 /* TyphoonContentProviderFactory.swift in Sources */,
 				A5771B191B81546600CD4E70 /* ApplicationAssembly.swift in Sources */,
