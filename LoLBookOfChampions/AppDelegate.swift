@@ -75,6 +75,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func initializeApplication() {
         self.initializeLogger()
         self.initializeApplicationURLCache()
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
         self.syncDataDragon()
     }
     

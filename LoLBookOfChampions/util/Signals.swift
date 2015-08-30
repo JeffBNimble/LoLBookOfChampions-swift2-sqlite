@@ -12,13 +12,13 @@ import SwiftProtocolsSQLite
 import ReactiveCocoa
 
 private class AppContentObserver : ContentObserver {
-    private let sink : Event<(Uri, ContentOperation), NoError>.Sink
-    init(sink: Event<(Uri, ContentOperation), NoError>.Sink) {
+    private let sink : Event<(Uri, ContentOperation, ContentObserver), NoError>.Sink
+    init(sink: Event<(Uri, ContentOperation, ContentObserver), NoError>.Sink) {
         self.sink = sink
     }
     
     @objc func onUpdate(contentUri: Uri, operation: ContentOperation) {
-        sendNext(sink, (contentUri, operation))
+        sendNext(sink, (contentUri, operation, self))
     }
 }
 
@@ -26,8 +26,8 @@ public func uriChangeSignal(contentUri: Uri,
     contentResolver: ContentResolver,
     notifyForDescendents: Bool,
     operations: [ContentOperation]? = [],
-    initialOperation: ContentOperation?) -> SignalProducer<(Uri, ContentOperation), NoError> {
-        return SignalProducer<(Uri, ContentOperation), NoError>() { observer, disposable in
+    initialOperation: ContentOperation?) -> SignalProducer<(Uri, ContentOperation, ContentObserver), NoError> {
+        return SignalProducer<(Uri, ContentOperation, ContentObserver), NoError>() { observer, disposable in
             let contentObserver = AppContentObserver(sink: observer)
             contentResolver.registerContentObserver(contentUri, notifyForDescendents: notifyForDescendents, contentObserver: contentObserver)
             
@@ -37,7 +37,7 @@ public func uriChangeSignal(contentUri: Uri,
             
             contentResolver.notifyChange(contentUri, operation: initialOperation)
     }
-    .filter() { (uri, operation) in
+    .filter() { (uri, operation, contentObserver) in
         guard let operations = operations where !operations.isEmpty else {
             return true
         }

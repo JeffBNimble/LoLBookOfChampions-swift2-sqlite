@@ -41,6 +41,8 @@ class CoreAssembly : TyphoonAssembly {
                 initializer.injectParameterWith(self.contentProviderFactory())
                 initializer.injectParameterWith(self.bundleIdentifier())
                 initializer.injectParameterWith([DataDragon.contentAuthority : DataDragonContentProvider.self])
+                
+                definition.scope = .Singleton
             }
         }
     }

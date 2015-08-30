@@ -18,12 +18,19 @@ import SwiftProtocolsSQLite
 class ChampionCell : UICollectionViewCell {
     @IBOutlet weak var championImageView : UIImageView!
     @IBOutlet weak var championNameLabel : UILabel!
+    
+    override func prepareForReuse() {
+        self.championImageView.image = nil
+        self.championNameLabel.text = ""
+    }
 }
 
 class ChampionCollectionViewController : UICollectionViewController, UINavigationControllerDelegate {
     var dataSource : ChampionCollectionViewDataSource!
     var mainBundle : NSBundle!
     
+    private var countSignal : SignalProducer<Int, NSError>!
+    private var champSignal : SignalProducer<Cursor?, NSError>!
     private var disposables : [Disposable] = []
     private var magic : SKEmitterNode!
     private var magicColors : [UIColor]!
@@ -39,6 +46,22 @@ class ChampionCollectionViewController : UICollectionViewController, UINavigatio
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         self.initialize()
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        super.prepareForSegue(segue, sender: sender)
+        
+        guard segue.identifier == "showChampionSkins" else {
+            return
+        }
+        
+        let indexPath = self.collectionView?.indexPathForCell(sender as! UICollectionViewCell)
+        let viewController = segue.destinationViewController as! ChampionSkinCollectionViewController
+        let cursor = self.dataSource.championCursor
+        cursor.moveToPosition(indexPath!.row)
+        viewController.championId = cursor.intFor(DataDragonDatabase.Champion.Columns.id)
+        viewController.championName = cursor.stringFor(DataDragonDatabase.Champion.Columns.name)
+        viewController.championTitle = cursor.stringFor(DataDragonDatabase.Champion.Columns.title)
     }
     
     override func viewDidLoad() {
@@ -61,7 +84,9 @@ class ChampionCollectionViewController : UICollectionViewController, UINavigatio
             .start(next: { count, cursor in
                 self.dataSource.championsCount = count
                 self.dataSource.championCursor = cursor
-                self.collectionView?.reloadData()
+                if count > 0 && cursor!.moveToFirst() {
+                    self.collectionView?.reloadData()
+                }
             })
         )
     }
@@ -81,7 +106,6 @@ class ChampionCollectionViewController : UICollectionViewController, UINavigatio
     
     private func assignRandomMagicColor() {
         let colorIndex = Int(rand()) % self.magicColors.count
-        print("The new color index is \(colorIndex)")
         self.magic.particleColor = self.magicColors[colorIndex]
     }
     
@@ -130,10 +154,12 @@ class ChampionCollectionViewDataSource : NSObject, UICollectionViewDataSource, U
     private var championCursor : Cursor! {
         willSet {
             if championCursor != nil {
-                championCursor.close()
+                //championCursor.close()
             }
         }
     }
+    
+    private var contentObservers : [ContentObserver] = []
     private let contentResolver : ContentResolver
     
     init(contentResolver : ContentResolver) {
@@ -148,7 +174,8 @@ class ChampionCollectionViewDataSource : NSObject, UICollectionViewDataSource, U
             initialOperation: .Insert)
         .observeOn(dataDragonDatabaseScheduler)
         .promoteErrors(SQLError.self)
-        .map() { (uri, operation) in
+        .map() { (uri, operation, contentObserver) in
+            self.contentObservers.append(contentObserver)
             do {
                 let cursor = try self.contentResolver.query(DataDragonDatabase.Champion.uri,
                     projection: self.championCountProjection,
@@ -177,7 +204,8 @@ class ChampionCollectionViewDataSource : NSObject, UICollectionViewDataSource, U
             initialOperation: .Insert)
         .observeOn(dataDragonDatabaseScheduler)
         .promoteErrors(SQLError.self)
-        .map() { (uri, operation) in
+        .map() { (uri, operation, contentObserver) in
+            self.contentObservers.append(contentObserver)
             do {
                 return try self.contentResolver.query(DataDragonDatabase.Champion.uri,
                     projection: self.championProjection,
@@ -203,6 +231,7 @@ class ChampionCollectionViewDataSource : NSObject, UICollectionViewDataSource, U
     // MARK: UICollectionViewDelegate methods
     func collectionView(collectionView: UICollectionView, willDisplayCell cell: UICollectionViewCell, forItemAtIndexPath indexPath: NSIndexPath) {
         guard self.championCursor != nil && self.championCursor.moveToPosition(indexPath.row) else {
+            DDLogError("Unable to move cursor \(self.championCursor) to \(indexPath.row)")
             return
         }
         
@@ -218,6 +247,4 @@ class ChampionCollectionViewDataSource : NSObject, UICollectionViewDataSource, U
             championCell.setNeedsDisplay()
             }, failure: nil)
     }
-
-    
 }

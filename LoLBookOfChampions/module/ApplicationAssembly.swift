@@ -50,6 +50,20 @@ class ApplicationAssembly : TyphoonAssembly {
         }
     }
     
+    dynamic func championSkinCollectionViewController() -> AnyObject {
+        return TyphoonDefinition.withClass(ChampionSkinCollectionViewController.self) { definition in
+            definition.injectProperty("dataSource", with: self.championSkinCollectionViewDataSource())
+        }
+    }
+    
+    dynamic func championSkinCollectionViewDataSource() -> AnyObject {
+        return TyphoonDefinition.withClass(ChampionSkinCollectionViewDataSource.self) { definition in
+            definition.useInitializer("initWithContentResolver:") { initializer in
+                initializer.injectParameterWith(self.core.contentResolver())
+            }
+        }
+    }
+
     dynamic func currentDevice() -> AnyObject {
         return TyphoonDefinition.withClass(UIDevice.self) { definition in
             definition.useInitializer("currentDevice")

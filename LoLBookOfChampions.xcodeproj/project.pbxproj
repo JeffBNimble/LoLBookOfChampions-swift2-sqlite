@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		10E5B38686FC366FE0740254 /* Pods_LoLBookOfChampions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DABBDBFE2F5D83BED1E4F2 /* Pods_LoLBookOfChampions.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		A506732B1B92978400448777 /* ChampionSkinCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A506732A1B92978400448777 /* ChampionSkinCollectionViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		A50B42BD1B8F2373007CD2AC /* Signals.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50B42BC1B8F2373007CD2AC /* Signals.swift */; settings = {ASSET_TAGS = (); }; };
 		A5771ADA1B80BC8D00CD4E70 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5771ACE1B80BC8D00CD4E70 /* Alamofire.framework */; };
 		A5771ADC1B80BC8D00CD4E70 /* CocoaLumberjackSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5771AD01B80BC8D00CD4E70 /* CocoaLumberjackSwift.framework */; };
@@ -107,6 +108,7 @@
 		817912CE85F853832185BD36 /* Pods-LoLBookOfChampionsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoLBookOfChampionsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoLBookOfChampionsTests/Pods-LoLBookOfChampionsTests.release.xcconfig"; sourceTree = "<group>"; };
 		96DEE882BA24069F3C3EB983 /* Pods-LoLBookOfChampions.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoLBookOfChampions.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoLBookOfChampions/Pods-LoLBookOfChampions.release.xcconfig"; sourceTree = "<group>"; };
 		A1761F2F276F64DA245B5BFD /* Pods_LoLBookOfChampionsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoLBookOfChampionsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A506732A1B92978400448777 /* ChampionSkinCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChampionSkinCollectionViewController.swift; sourceTree = "<group>"; };
 		A50B42BC1B8F2373007CD2AC /* Signals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signals.swift; sourceTree = "<group>"; };
 		A53C34B91B8816E500786EAD /* SwiftAdaptersFMDB.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftAdaptersFMDB.xcodeproj; path = "Carthage/Checkouts/swift-adapters-fmdb/SwiftAdaptersFMDB.xcodeproj"; sourceTree = "<group>"; };
 		A5771ACE1B80BC8D00CD4E70 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 				A5D3B09F1B2FBE8300693C09 /* LaunchScreen.xib */,
 				A5D3B09A1B2FBE8300693C09 /* Main.storyboard */,
 				A5771B0C1B8127E400CD4E70 /* ChampionCollectionViewController.swift */,
+				A506732A1B92978400448777 /* ChampionSkinCollectionViewController.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 				TargetAttributes = {
 					A5D3B0901B2FBE8300693C09 = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = FB4Z23VQUS;
 					};
 					A5D3B0A51B2FBE8300693C09 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -609,6 +613,7 @@
 				A50B42BD1B8F2373007CD2AC /* Signals.swift in Sources */,
 				A5771B1B1B81549600CD4E70 /* DataDragonAssembly.swift in Sources */,
 				A59F554C1B88AAE000022E74 /* TyphoonContentProviderFactory.swift in Sources */,
+				A506732B1B92978400448777 /* ChampionSkinCollectionViewController.swift in Sources */,
 				A5771B191B81546600CD4E70 /* ApplicationAssembly.swift in Sources */,
 				A5771B0D1B8127E400CD4E70 /* ChampionCollectionViewController.swift in Sources */,
 				A5D3B0971B2FBE8300693C09 /* AppDelegate.swift in Sources */,
@@ -743,6 +748,8 @@
 			baseConfigurationReference = 140A812125737AA6AC7B06C1 /* Pods-LoLBookOfChampions.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/**",
@@ -752,6 +759,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "LoLBookOfChampions/Supporting Files/LoLBookOfChampions-Bridging-Header.h";
 			};
 			name = Debug;
@@ -761,6 +769,8 @@
 			baseConfigurationReference = 96DEE882BA24069F3C3EB983 /* Pods-LoLBookOfChampions.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/**",
@@ -770,6 +780,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "LoLBookOfChampions/Supporting Files/LoLBookOfChampions-Bridging-Header.h";
 			};
 			name = Release;
