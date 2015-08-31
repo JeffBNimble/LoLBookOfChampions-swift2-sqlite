@@ -1,3 +1,6 @@
+# NOTE
+This README is not accurate and is out of date, but the code is working. Updates to the README are coming soon!
+
 # Installation
 * Use [CocoaPods](http://www.cocoapods.org), navigate to the project folder containing the podfile and run `pod install`
 * Open the workspace in either XCode or AppCode, compile and run the app. Note: This application is written in Swift 2 and therefore requires you to use XCode 7 or later
