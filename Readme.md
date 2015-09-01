@@ -1,9 +1,8 @@
-# NOTE
-This README is not accurate and is out of date, but the code is working. Updates to the README are coming soon!
-
 # Installation
+* This application is written using Swift 2 and requires XCode 7 or later. If you're running an earlier version of XCode, you must use xcode-select to switch the compiler using ```sudo xcode-select -s /Applications/Xcode-beta.app/Contents/Developer```
+* Use [Carthage](https://github.com/Carthage/Carthage) and run ```carthage update --platform ios```. If you get a codesign error building ReactiveCocoa, retry by running ```carthage build --platform ios```. You may have to retry multiple times. If you can never get this to work, see [this post](https://github.com/Carthage/Carthage/issues/418).
 * Use [CocoaPods](http://www.cocoapods.org), navigate to the project folder containing the podfile and run `pod install`
-* Open the workspace in either XCode or AppCode, compile and run the app. Note: This application is written in Swift 2 and therefore requires you to use XCode 7 or later
+* Open the workspace in XCode 7, compile and run the app.
 
 **Warning**
 
@@ -28,21 +27,25 @@ A UICollectionViewController-based screen which shows a list of skins for the se
 ![Champion Skins Screen](documentation/championSkinScreenshot.jpg)
 
 #Goals
-* Build a Swift 2-version of [this](https://github.com/JeffBNimble/LoLBookOfChampions-ios-sqlite)
+* Build a Swift 2 version of [this](https://github.com/JeffBNimble/LoLBookOfChampions-ios-sqlite)
 * Use size classes to support iOS 9 multitasking
-* Try out a compelling mobile application architecture (more on this below)
-* Find a way to somehow use SceneKit
+* Try out a compelling mobile framework-based application architecture (more on this below)
+* Use Carthage
+* Use ReactiveCocoa
+* Use Quick and Nimble for testing
 * Have fun!
 
-All of my goals were met. Most of the code was written over a weekend. I plan on continuing to tinker with it, slowly adding more features, but mainly use it as a playground for a tech stack that I'm interested in.
+Not all of my goals were met. I've yet to be able to spend much time with size classes and unfortunately, I've written no tests. This version of the application took much longer to write than the Objective-C version. I plan to continue working with the application, slowly adding more features, but mainly use it as a playground for a tech stack that I'm interested in.
 
 #Tech Stack (in no particular order)
+* [Swift 2.0](https://developer.apple.com/swift/?cid=wwa-us-kwg-features) : Using the newest features of the language including throws, guards and generics
 * [Typhoon](https://github.com/appsquickly/Typhoon) : A very nice dependency injection library for iOS/OSX (Objective-C and Swift)
 * [FMDB](https://github.com/ccgus/fmdb) : A clean and simple Objective-C wrapper around SQLite
-* [Alamofire](https://github.com/Alamofire/Alamofire) : The defacto standard networking library for Swift
+* [Alamofire](https://github.com/Alamofire/Alamofire) : The defacto standard networking library for Swift, if such a thing yet exists
+* [AFNetworking](https://github.com/AFNetworking/AFNetworking) : Using only the UIImage extensions for asynchronously loading UIImage's
 * [Reactive Cocoa 3](https://github.com/ReactiveCocoa/ReactiveCocoa) : Functional Reactive Programming for iOS [ReactiveX.org](http://ReactiveX.org)
 * [CocoaLumberjack](https://github.com/CocoaLumberjack/CocoaLumberjack) : Logging (duh, what else do lumberjacks do?)
-* [SceneKit](https://developer.apple.com/library/ios/documentation/SceneKit/Reference/SceneKit_Framework/) : To add a little ambient magic to the application
+* [] [SceneKit](https://developer.apple.com/library/ios/documentation/SceneKit/Reference/SceneKit_Framework/) : To add a little ambient magic to the application
 * [Quick](https://github.com/Quick/Quick)/[Nimble](https://github.com/Quick/Nimble) : If you write code, you better write tests
 
 # Application Architecture
@@ -51,20 +54,11 @@ While the application architecture may not be all the novel, it is based upon so
 * Persist early and often, enabling offline use once all images are cached
 * Stay off of the main thread so the application always remains responsive
 * Code is unit testable (not yet fully unit tested, though some tests exist)
+* Employ extreme modularity, assembling the application from modules
 
-The application is split into three "modules". There is a Typhoon assembly for each. Much of the core is an implementation of some concepts that should be familiar if you are an Android developer, namely [Services](http://developer.android.com/guide/components/services.html) and [Content Providers](http://developer.android.com/guide/topics/providers/content-providers.html). Additionally, I wrote a thin wrapper around the [FMDB FMResultSet class](http://ccgus.github.io/fmdb/html/Classes/FMResultSet.html) that allows for moving forward, backward or to any position within the result set.
-
-I want to give a special shoutout to [Jasper Blues](https://github.com/jasperblues) who is the Project Lead for the [Typhoon Framework](https://github.com/appsquickly/Typhoon) and spent some of his valuable weekend time helping me with Typhoon.
+The application itself is mostly just UI. The rest is assembled from frameworks which have no knowledge of the application.
 
 ##Screencasts
 I have created a [YouTube Channel](https://www.youtube.com/channel/UCUMAujrLQP-zB925se5YIiQ) with several playlists that use this application as an example. I'm adding videos regularly. Most of the videos are short (5-6 minutes or less) and are intended to help you learn more about iOS development. Feel free to subscribe, leave feedback and learn!
 
-* [Full list of videos (in order)](https://www.youtube.com/playlist?list=PLhU81D62nv-YjCJLbXlfE8kImsRCkea38)
-* [Typhoon Primer](https://www.youtube.com/playlist?list=PLhU81D62nv-Yd5jCW9LRjI4_AfI5NwJhe)
-* [Concurrency Primer](https://www.youtube.com/playlist?list=PLhU81D62nv-b04EaWHYHlFwsRLBDLvfFv)
-* [Command Pattern Primer](https://www.youtube.com/playlist?list=PLhU81D62nv-blgQxJHy-V_081zI7LCyWl)
-* [Promises Primer](https://www.youtube.com/playlist?list=PLhU81D62nv-bkRDbrBufTOd0HV34gx0ar)
-* [Bolts Framework Primer](https://www.youtube.com/playlist?list=PLhU81D62nv-aK2N86AlOOXQnw38YAOUeq)
-* [SQLite Primer](https://www.youtube.com/playlist?list=PLhU81D62nv-ZAI5hcIVg1CgQzOtqliLDj)
-* ContentProvider primer: In process NOW!
-* BDD-Style Unit Testing With Kiwi Primer: Coming soon!
+* Videos will be posted here as they become available
