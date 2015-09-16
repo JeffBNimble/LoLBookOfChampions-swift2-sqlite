@@ -29,9 +29,7 @@ class ChampionSkinCollectionViewController : UICollectionViewController {
     var championTitle : String!
     
     var dataSource : ChampionSkinCollectionViewDataSource!
-    
-    private var countSignal : SignalProducer<Int, NSError>?
-    private var champSignal : SignalProducer<Cursor?, NSError>?
+
     private var disposables : [Disposable] = []
     
     override func viewDidLoad() {
@@ -48,14 +46,12 @@ class ChampionSkinCollectionViewController : UICollectionViewController {
     override func viewWillAppear(animated: Bool) {
         // Setup the signals
         self.disposables.append(
-            zip(self.dataSource.skinCountSignal(), self.dataSource.skinsSignal())
-                .observeOn(UIScheduler())
-                .start(next: { count, cursor in
+            self.dataSource.getContentSignal()
+                .observeOn(QueueScheduler.mainQueueScheduler)
+                .start(next: {  count, cursor in
                     self.dataSource.skinsCount = count
                     self.dataSource.skinCursor = cursor
-                    if count > 0 {
-                        self.collectionView?.reloadData()
-                    }
+                    self.collectionView?.reloadData()
                 })
         )
 
@@ -66,9 +62,6 @@ class ChampionSkinCollectionViewController : UICollectionViewController {
             disposable.dispose()
         }
         self.disposables.removeAll()
-        
-        countSignal = nil
-        champSignal = nil
         
         self.dataSource.skinsCount = 0
         if self.dataSource.skinCursor != nil {
@@ -108,13 +101,13 @@ class ChampionSkinCollectionViewDataSource : NSObject, UICollectionViewDataSourc
     
     var championId : Int!
     
-    private var skinCountProjection : [String] {
+    var skinCountProjection : [String] {
         get {
             return ["count(*) as \(ChampionSkinCollectionViewDataSource.COLUMN_ROW_COUNT)"]
         }
     }
     
-    private var skinProjection : [String] {
+    var skinProjection : [String] {
         get {
             return [
                 DataDragonDatabase.ChampionSkin.Columns.portraitImageUrl,
@@ -132,61 +125,34 @@ class ChampionSkinCollectionViewDataSource : NSObject, UICollectionViewDataSourc
             }
         }
     }
-    
-    private var contentObservers : [ContentObserver] = []
-    private let contentResolver : ContentResolver
+
+    let contentResolver : ContentResolver
     
     init(contentResolver : ContentResolver) {
         self.contentResolver = contentResolver
         super.init()
     }
-    
-    func skinCountSignal() -> SignalProducer<Int, SQLError> {
-        return uriChangeSignal(DataDragonDatabase.ChampionSkin.uri,
-            contentResolver: self.contentResolver,
-            notifyForDescendents: false,
-            initialOperation: .Insert)
-            .observeOn(dataDragonDatabaseScheduler)
-            .promoteErrors(SQLError.self)
-            .map() { (uri, operation, contentObserver) in
-                self.contentObservers.append(contentObserver)
-                do {
-                    let cursor = try self.contentResolver.query(DataDragonDatabase.ChampionSkin.uri,
-                        projection: self.skinCountProjection,
-                        selection: "\(DataDragonDatabase.ChampionSkin.Columns.championId) = :\(DataDragonDatabase.ChampionSkin.Columns.championId)",
-                        namedSelectionArgs: ["\(DataDragonDatabase.ChampionSkin.Columns.championId)" : self.championId])
-                    
-                    defer {
-                        cursor.close()
-                    }
-                    
-                    return cursor.moveToFirst() ? cursor.intFor(ChampionSkinCollectionViewDataSource.COLUMN_ROW_COUNT) : 0
-                    
-                } catch {
-                    return 0
-                }
-        }
-    }
-    
-    func skinsSignal() -> SignalProducer<Cursor?, SQLError> {
-        return uriChangeSignal(DataDragonDatabase.ChampionSkin.uri,
-            contentResolver: self.contentResolver,
-            notifyForDescendents: false,
-            initialOperation: .Insert)
-            .observeOn(dataDragonDatabaseScheduler)
-            .promoteErrors(SQLError.self)
-            .map() { (uri, operation, contentObserver) in
-                self.contentObservers.append(contentObserver)
-                do {
-                    return try self.contentResolver.query(DataDragonDatabase.ChampionSkin.uri,
-                        projection: self.skinProjection,
-                        selection: "\(DataDragonDatabase.ChampionSkin.Columns.championId) = :\(DataDragonDatabase.ChampionSkin.Columns.championId)",
-                        namedSelectionArgs: ["\(DataDragonDatabase.ChampionSkin.Columns.championId)" : self.championId],
-                        sort: "\(DataDragonDatabase.ChampionSkin.Columns.skinNumber)")
-                } catch {
-                    return nil
-                }
-        }
+
+    func getContentSignal() -> SignalProducer<(Int, Cursor), SQLError> {
+        return SignalProducer<(Int, Cursor), SQLError>() { observer, disposable in
+            var count : Int!
+            var cursor : Cursor!
+
+            // Retrieve the count of champion skins
+            self.getChampionSkinCountAction().apply(self.championId)
+            .start(next: { championSkinCount in
+                count = championSkinCount
+            })
+
+            // Retrieve the champions cursor
+            self.getChampionSkinsAction().apply(self.championId)
+            .start(next: { championSkinCursor in
+                cursor = championSkinCursor
+            })
+
+            sendNext(observer, (count, cursor))
+            sendCompleted(observer)
+        }.startOn(dataDragonDatabaseScheduler)
     }
     
     private func isPortraitOrientation(view: UIView) -> Bool {

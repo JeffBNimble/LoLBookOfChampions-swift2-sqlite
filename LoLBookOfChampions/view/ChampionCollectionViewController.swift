@@ -77,18 +77,30 @@ class ChampionCollectionViewController : UICollectionViewController, UINavigatio
         self.view.sendSubviewToBack(self.magicView)
         self.presentNewMagicScene = true
         
-        // Setup the signals
+        // Setup the signals, starting with the signal that fires when the initial content is available
         self.disposables.append(
-            combineLatest(self.dataSource.championCountSignal(), self.dataSource.championsSignal())
-            .observeOn(UIScheduler())
-            .start(next: { count, cursor in
-                self.dataSource.championsCount = count
-                self.dataSource.championCursor = cursor
-                if count > 0 && cursor!.moveToFirst() {
-                    self.collectionView?.reloadData()
-                }
-            })
+            self.dataSource.getContentSignal()
+                .observeOn(QueueScheduler.mainQueueScheduler)
+                .start(next: { (count, cursor) in
+                    self.reloadCollectionView(count, championCursor: cursor)
+                })
         )
+
+        // Now start the signal that fires when we sync new content from the API
+        self.disposables.append(
+            self.dataSource.contentChangedSignal()
+                .observeOn(dataDragonDatabaseScheduler)
+                .start(next: { (_, _) in
+                     self.disposables.append(
+                        self.dataSource.getContentSignal()
+                            .observeOn(QueueScheduler.mainQueueScheduler)
+                            .start(next: { (count, cursor) in
+                                self.reloadCollectionView(count, championCursor: cursor)
+                            })
+                     )
+                })
+        )
+
     }
     
     override func viewWillLayoutSubviews() {
@@ -128,18 +140,18 @@ class ChampionCollectionViewController : UICollectionViewController, UINavigatio
         self.magicScene.addChild(self.magic)
         self.magicView.presentScene(self.magicScene)
     }
+
+    private func reloadCollectionView(championCount: Int, championCursor: Cursor) {
+        self.dataSource.championCount = championCount
+        self.dataSource.championCursor = championCursor
+        self.collectionView?.reloadData()
+    }
 }
 
 class ChampionCollectionViewDataSource : NSObject, UICollectionViewDataSource, UICollectionViewDelegate {
-    private static let COLUMN_ROW_COUNT = "row_count"
+    static let COLUMN_ROW_COUNT = "row_count"
     
-    private var championCountProjection : [String] {
-        get {
-            return ["count(*) as \(ChampionCollectionViewDataSource.COLUMN_ROW_COUNT)"]
-        }
-    }
-    
-    private var championProjection : [String] {
+    var championProjection : [String] {
         get {
             return [
                 DataDragonDatabase.Champion.Columns.id,
@@ -150,77 +162,59 @@ class ChampionCollectionViewDataSource : NSObject, UICollectionViewDataSource, U
         }
     }
     
-    private var championsCount = 0
-    private var championCursor : Cursor! {
+    var championCount = 0
+    var championCursor : Cursor! {
         willSet {
             if championCursor != nil {
-                //championCursor.close()
+                championCursor.close()
             }
         }
     }
     
-    private var contentObservers : [ContentObserver] = []
-    private let contentResolver : ContentResolver
+    var contentObservers : [ContentObserver] = []
+    let contentResolver : ContentResolver
     
     init(contentResolver : ContentResolver) {
         self.contentResolver = contentResolver
         super.init()
     }
-    
-    func championCountSignal() -> SignalProducer<Int, SQLError> {
+
+    func contentChangedSignal() -> SignalProducer<(Uri, ContentOperation), NoError> {
         return uriChangeSignal(DataDragonDatabase.Champion.uri,
-            contentResolver: self.contentResolver,
-            notifyForDescendents: false,
-            initialOperation: .Insert)
-        .observeOn(dataDragonDatabaseScheduler)
-        .promoteErrors(SQLError.self)
-        .map() { (uri, operation, contentObserver) in
-            self.contentObservers.append(contentObserver)
-            do {
-                let cursor = try self.contentResolver.query(DataDragonDatabase.Champion.uri,
-                    projection: self.championCountProjection,
-                    selection: nil,
-                    selectionArgs: [String](),
-                    groupBy: nil,
-                    having: nil,
-                    sort: nil)
-                    
-                defer {
-                    cursor.close()
-                }
-                    
-                return cursor.moveToFirst() ? cursor.intFor(ChampionCollectionViewDataSource.COLUMN_ROW_COUNT) : 0
-                    
-            } catch {
-                return 0
-            }
-        }
+                    contentResolver: self.contentResolver,
+                    notifyForDescendents: false,
+                    started: { contentObserver in
+                        self.contentObservers.append(contentObserver)
+                    })
+            .startOn(dataDragonDatabaseScheduler)
     }
-    
-    func championsSignal() -> SignalProducer<Cursor?, SQLError> {
-        return uriChangeSignal(DataDragonDatabase.Champion.uri,
-            contentResolver: self.contentResolver,
-            notifyForDescendents: false,
-            initialOperation: .Insert)
-        .observeOn(dataDragonDatabaseScheduler)
-        .promoteErrors(SQLError.self)
-        .map() { (uri, operation, contentObserver) in
-            self.contentObservers.append(contentObserver)
-            do {
-                return try self.contentResolver.query(DataDragonDatabase.Champion.uri,
-                    projection: self.championProjection,
-                    selectionArgs: nil,
-                    sort: "\(DataDragonDatabase.Champion.Columns.name)")
-            } catch {
-                return nil
-            }
-        }
+
+    func getContentSignal() -> SignalProducer<(Int, Cursor), SQLError> {
+        return SignalProducer<(Int, Cursor), SQLError>() { observer, disposable in
+            var count : Int!
+            var cursor : Cursor!
+
+            // Retrieve the count of champions
+            self.getChampionCountAction().apply()
+                .start(next: { championCount in
+                    count = championCount
+                })
+
+            // Retrieve the champions cursor
+            self.getChampionsAction().apply()
+                .start(next: { championCursor in
+                    cursor = championCursor
+                })
+
+            sendNext(observer, (count, cursor))
+            sendCompleted(observer)
+        }.startOn(dataDragonDatabaseScheduler)
     }
     
     // MARK: UICollectionViewDataSource methods
     
     @objc func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.championsCount
+        return self.championCount
     }
     
     // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:

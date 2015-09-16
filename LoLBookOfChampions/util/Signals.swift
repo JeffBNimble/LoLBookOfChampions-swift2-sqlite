@@ -12,13 +12,13 @@ import SwiftProtocolsSQLite
 import ReactiveCocoa
 
 private class AppContentObserver : ContentObserver {
-    private let sink : Event<(Uri, ContentOperation, ContentObserver), NoError>.Sink
-    init(sink: Event<(Uri, ContentOperation, ContentObserver), NoError>.Sink) {
+    private let sink : Event<(Uri, ContentOperation), NoError>.Sink
+    init(sink: Event<(Uri, ContentOperation), NoError>.Sink) {
         self.sink = sink
     }
     
     @objc func onUpdate(contentUri: Uri, operation: ContentOperation) {
-        sendNext(sink, (contentUri, operation, self))
+        sendNext(sink, (contentUri, operation))
     }
 }
 
@@ -26,18 +26,13 @@ public func uriChangeSignal(contentUri: Uri,
     contentResolver: ContentResolver,
     notifyForDescendents: Bool,
     operations: [ContentOperation]? = [],
-    initialOperation: ContentOperation?) -> SignalProducer<(Uri, ContentOperation, ContentObserver), NoError> {
-        return SignalProducer<(Uri, ContentOperation, ContentObserver), NoError>() { observer, disposable in
+    started: ContentObserver -> ()) -> SignalProducer<(Uri, ContentOperation), NoError> {
+        return SignalProducer<(Uri, ContentOperation), NoError>() { observer, disposable in
             let contentObserver = AppContentObserver(sink: observer)
             contentResolver.registerContentObserver(contentUri, notifyForDescendents: notifyForDescendents, contentObserver: contentObserver)
-            
-            guard let initialOperation = initialOperation else {
-                return
-            }
-            
-            contentResolver.notifyChange(contentUri, operation: initialOperation)
+            started(contentObserver)
     }
-    .filter() { (uri, operation, contentObserver) in
+    .filter() { (uri, operation) in
         guard let operations = operations where !operations.isEmpty else {
             return true
         }

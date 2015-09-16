@@ -95,23 +95,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func syncDataDragon() {
-        dispatch_async(backgroundQueue, {
-            Action<Void, Void, SQLError>() { input in
-                return SignalProducer<Void, SQLError>() { observer, disposable in
-                    do {
-                        try self.dataDragon.sync()
-                    } catch {
-                        DDLogError("An error occurred attempting to sync Data Dragon: \(error)")
-                        sendError(observer, error as! SQLError)
-                    }
-                    sendCompleted(observer)
-                }
-                }
-                .apply(())
-                .start(completed: {
-                    DDLogInfo("Completed data dragon sync")
-                })
-        })
+        self.dataDragonSyncAction()
+            .apply(())
+            .startOn(backgroundScheduler)
+            .start(completed: {
+                DDLogInfo("Completed data dragon sync")
+            })
     }
 
 }
