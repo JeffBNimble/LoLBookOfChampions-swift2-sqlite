@@ -84,9 +84,9 @@ class ChampionCollectionViewController : UICollectionViewController, UINavigatio
         self.disposables.append(
             signal
             .throttle(0.25, onScheduler: QueueScheduler.mainQueueScheduler)
-            .observe(next: { color in
+            .observeNext() { color in
                 self.presentMagicParticleScene(color)
-            })!
+            }!
         )
 
         self.assignRandomMagicColor()
@@ -95,24 +95,24 @@ class ChampionCollectionViewController : UICollectionViewController, UINavigatio
         self.disposables.append(
             self.dataSource.getContentSignal()
                 .observeOn(QueueScheduler.mainQueueScheduler)
-                .start(next: { (count, cursor) in
+                .startWithNext() { (count, cursor) in
                     self.reloadCollectionView(count, championCursor: cursor)
-                })
+                }
         )
 
         // Now start the signal that fires when we sync new content from the API
         self.disposables.append(
             self.dataSource.contentChangedSignal()
                 .observeOn(dataDragonDatabaseScheduler)
-                .start(next: { (_, _) in
+                .startWithNext() { (_, _) in
                      self.disposables.append(
                         self.dataSource.getContentSignal()
                             .observeOn(QueueScheduler.mainQueueScheduler)
-                            .start(next: { (count, cursor) in
+                            .startWithNext() { (count, cursor) in
                                 self.reloadCollectionView(count, championCursor: cursor)
-                            })
+                            }
                      )
-                })
+                }
         )
 
     }
@@ -202,15 +202,15 @@ class ChampionCollectionViewDataSource : NSObject, UICollectionViewDataSource, U
 
             // Retrieve the count of champions
             self.getChampionCountAction().apply()
-                .start(next: { championCount in
+                .startWithNext() { championCount in
                     count = championCount
-                })
+                }
 
             // Retrieve the champions cursor
             self.getChampionsAction().apply()
-                .start(next: { championCursor in
+                .startWithNext() { championCursor in
                     cursor = championCursor
-                })
+                }
 
             sendNext(observer, (count, cursor))
             sendCompleted(observer)

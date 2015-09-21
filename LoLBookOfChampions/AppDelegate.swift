@@ -101,9 +101,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         dispatch_async(queue, {
             self.dataDragonSyncAction()
             .apply(())
-            .start(completed: {
+            .startWithCompleted() {
                 DDLogInfo("Completed data dragon sync")
-            })
+            }
         })
     }
 

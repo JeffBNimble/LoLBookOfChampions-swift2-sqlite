@@ -48,11 +48,11 @@ class ChampionSkinCollectionViewController : UICollectionViewController {
         self.disposables.append(
             self.dataSource.getContentSignal()
                 .observeOn(QueueScheduler.mainQueueScheduler)
-                .start(next: {  count, cursor in
+                .startWithNext() {  count, cursor in
                     self.dataSource.skinsCount = count
                     self.dataSource.skinCursor = cursor
                     self.collectionView?.reloadData()
-                })
+                }
         )
 
     }
@@ -140,15 +140,15 @@ class ChampionSkinCollectionViewDataSource : NSObject, UICollectionViewDataSourc
 
             // Retrieve the count of champion skins
             self.getChampionSkinCountAction().apply(self.championId)
-            .start(next: { championSkinCount in
+            .startWithNext() { championSkinCount in
                 count = championSkinCount
-            })
+            }
 
             // Retrieve the champions cursor
             self.getChampionSkinsAction().apply(self.championId)
-            .start(next: { championSkinCursor in
+            .startWithNext() { championSkinCursor in
                 cursor = championSkinCursor
-            })
+            }
 
             sendNext(observer, (count, cursor))
             sendCompleted(observer)
