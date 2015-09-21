@@ -95,12 +95,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func syncDataDragon() {
-        self.dataDragonSyncAction()
+        let queue = dispatch_queue_create("io.nimbleNoggin.LoLBookOfChampions.dataDragon.sync", DISPATCH_QUEUE_CONCURRENT)
+
+        // Have to dispatch to a concurent queue instead of using RC3 scheduler to get true non-serial concurrency
+        dispatch_async(queue, {
+            self.dataDragonSyncAction()
             .apply(())
-            .startOn(backgroundScheduler)
             .start(completed: {
                 DDLogInfo("Completed data dragon sync")
             })
+        })
     }
 
 }
