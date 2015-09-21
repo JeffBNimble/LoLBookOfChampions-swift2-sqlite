@@ -28,15 +28,16 @@ class ChampionCell : UICollectionViewCell {
 class ChampionCollectionViewController : UICollectionViewController, UINavigationControllerDelegate {
     var dataSource : ChampionCollectionViewDataSource!
     var mainBundle : NSBundle!
-    
-    private var countSignal : SignalProducer<Int, NSError>!
+
     private var champSignal : SignalProducer<Cursor?, NSError>!
+    private var colorSignal : Signal<UIColor, NoError>!
+    private var colorSink : Signal<UIColor, NoError>.Observer!
+    private var countSignal : SignalProducer<Int, NSError>!
     private var disposables : [Disposable] = []
     private var magic : SKEmitterNode!
     private var magicColors : [UIColor]!
     private var magicScene : SKScene!
     private var magicView : SKView!
-    private var presentNewMagicScene : Bool = false
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -75,7 +76,20 @@ class ChampionCollectionViewController : UICollectionViewController, UINavigatio
         self.magicView.asynchronous = true
         self.view.addSubview(self.magicView)
         self.view.sendSubviewToBack(self.magicView)
-        self.presentNewMagicScene = true
+
+        // Create (and observe) the signal that generates random colors
+        let (signal, sink) = Signal<UIColor, NoError>.pipe()
+        self.colorSignal = signal
+        self.colorSink = sink
+        self.disposables.append(
+            signal
+            .throttle(0.25, onScheduler: QueueScheduler.mainQueueScheduler)
+            .observe(next: { color in
+                self.presentMagicParticleScene(color)
+            })!
+        )
+
+        self.assignRandomMagicColor()
         
         // Setup the signals, starting with the signal that fires when the initial content is available
         self.disposables.append(
@@ -103,22 +117,14 @@ class ChampionCollectionViewController : UICollectionViewController, UINavigatio
 
     }
     
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        if presentNewMagicScene {
-            self.presentMagicParticleScene()
-            self.presentNewMagicScene = false
-        }
-    }
-    
     override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
-        self.presentNewMagicScene = true
+        self.assignRandomMagicColor()
     }
     
     private func assignRandomMagicColor() {
         let colorIndex = Int(rand()) % self.magicColors.count
-        self.magic.particleColor = self.magicColors[colorIndex]
+        sendNext(colorSink, self.magicColors[colorIndex])
     }
     
     private func initialize() {
@@ -127,14 +133,14 @@ class ChampionCollectionViewController : UICollectionViewController, UINavigatio
         self.magic = NSKeyedUnarchiver.unarchiveObjectWithFile(self.mainBundle.pathForResource("magic", ofType: "sks")!) as! SKEmitterNode
     }
     
-    private func presentMagicParticleScene() {
+    private func presentMagicParticleScene(color : UIColor) {
         let frame = self.view.frame
         self.magicView.frame = frame
         self.magicScene = SKScene(size: frame.size)
         self.magicScene.scaleMode = .AspectFill
         self.magicScene.backgroundColor = UIColor.blackColor()
         
-        self.assignRandomMagicColor()
+        self.magic.particleColor = color
         self.magic.position = CGPointMake(CGRectGetMidX(frame), CGRectGetMidY(frame))
         self.magic.removeFromParent()
         self.magicScene.addChild(self.magic)
