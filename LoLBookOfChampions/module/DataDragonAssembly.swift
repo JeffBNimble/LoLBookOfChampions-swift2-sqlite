@@ -19,7 +19,7 @@ class DataDragonAssembly : TyphoonAssembly {
     }
 
     func dataDragonConfig() -> AnyObject {
-        return TyphoonDefinition.configDefinitionWithName("DataDragon.plist")
+        return TyphoonDefinition.withConfigName("DataDragon.plist")
     }
     
     dynamic func databaseFactory() -> AnyObject {

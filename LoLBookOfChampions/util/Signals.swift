@@ -12,13 +12,13 @@ import SwiftProtocolsSQLite
 import ReactiveCocoa
 
 private class AppContentObserver : ContentObserver {
-    private let sink : Event<(Uri, ContentOperation), NoError>.Sink
-    init(sink: Event<(Uri, ContentOperation), NoError>.Sink) {
-        self.sink = sink
+    private let observer : Observer<(Uri, ContentOperation), NoError>
+    init(observer: Observer<(Uri, ContentOperation), NoError>) {
+        self.observer = observer
     }
     
     @objc func onUpdate(contentUri: Uri, operation: ContentOperation) {
-        sendNext(sink, (contentUri, operation))
+        observer.sendNext((contentUri, operation))
     }
 }
 
@@ -28,7 +28,7 @@ public func uriChangeSignal(contentUri: Uri,
     operations: [ContentOperation]? = [],
     started: ContentObserver -> ()) -> SignalProducer<(Uri, ContentOperation), NoError> {
         return SignalProducer<(Uri, ContentOperation), NoError>() { observer, disposable in
-            let contentObserver = AppContentObserver(sink: observer)
+            let contentObserver = AppContentObserver(observer: observer)
             contentResolver.registerContentObserver(contentUri, notifyForDescendents: notifyForDescendents, contentObserver: contentObserver)
             started(contentObserver)
     }

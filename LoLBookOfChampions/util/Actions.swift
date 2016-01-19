@@ -17,9 +17,9 @@ extension AppDelegate {
                     try self.dataDragon.sync()
                 } catch {
                     DDLogError("An error occurred attempting to sync Data Dragon: \(error)")
-                    sendError(observer, error as! SQLError)
+                    observer.sendFailed(error as! SQLError)
                 }
-                sendCompleted(observer)
+                observer.sendCompleted()
             }
         }
     }
@@ -42,9 +42,9 @@ extension ChampionCollectionViewDataSource {
                             projection: self.championProjection,
                             selectionArgs: nil,
                             sort: "\(DataDragonDatabase.Champion.Columns.name)")
-                    sendNext(observer, cursor)
+                    observer.sendNext(cursor)
                 } catch {
-                    sendError(observer, error as! SQLError)
+                    observer.sendFailed(error as! SQLError)
                 }
             }
         }
@@ -68,11 +68,11 @@ extension ChampionCollectionViewDataSource {
                         cursor.close()
                     }
 
-                    sendNext(observer, cursor.moveToFirst() ? cursor.intFor(ChampionCollectionViewDataSource.COLUMN_ROW_COUNT) : 0)
-                    sendCompleted(observer)
+                    observer.sendNext(cursor.moveToFirst() ? cursor.intFor(ChampionCollectionViewDataSource.COLUMN_ROW_COUNT) : 0)
+                    observer.sendCompleted()
 
                 } catch {
-                    sendError(observer, error as! SQLError)
+                    observer.sendFailed(error as! SQLError)
                 }
             }
         }
@@ -95,9 +95,9 @@ extension ChampionSkinCollectionViewDataSource {
                             selection: "\(DataDragonDatabase.ChampionSkin.Columns.championId) = :\(DataDragonDatabase.ChampionSkin.Columns.championId)",
                             namedSelectionArgs: ["\(DataDragonDatabase.ChampionSkin.Columns.championId)" : championId],
                             sort: "\(DataDragonDatabase.ChampionSkin.Columns.skinNumber)")
-                    sendNext(observer, cursor)
+                    observer.sendNext(cursor)
                 } catch {
-                    sendError(observer, error as! SQLError)
+                    observer.sendFailed(error as! SQLError)
                 }
             }
         }
@@ -117,11 +117,11 @@ extension ChampionSkinCollectionViewDataSource {
                         cursor.close()
                     }
 
-                    sendNext(observer, cursor.moveToFirst() ? cursor.intFor(ChampionCollectionViewDataSource.COLUMN_ROW_COUNT) : 0)
-                    sendCompleted(observer)
+                    observer.sendNext(cursor.moveToFirst() ? cursor.intFor(ChampionCollectionViewDataSource.COLUMN_ROW_COUNT) : 0)
+                    observer.sendCompleted()
 
                 } catch {
-                    sendError(observer, error as! SQLError)
+                    observer.sendFailed(error as! SQLError)
                 }
             }
         }

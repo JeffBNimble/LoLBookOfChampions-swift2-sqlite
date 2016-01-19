@@ -31,7 +31,7 @@ class ChampionCollectionViewController : UICollectionViewController, UINavigatio
 
     private var champSignal : SignalProducer<Cursor?, NSError>!
     private var colorSignal : Signal<UIColor, NoError>!
-    private var colorSink : Signal<UIColor, NoError>.Observer!
+    private var colorObserver : Signal<UIColor, NoError>.Observer!
     private var countSignal : SignalProducer<Int, NSError>!
     private var disposables : [Disposable] = []
     private var magic : SKEmitterNode!
@@ -78,9 +78,9 @@ class ChampionCollectionViewController : UICollectionViewController, UINavigatio
         self.view.sendSubviewToBack(self.magicView)
 
         // Create (and observe) the signal that generates random colors
-        let (signal, sink) = Signal<UIColor, NoError>.pipe()
+        let (signal, observer) = Signal<UIColor, NoError>.pipe()
         self.colorSignal = signal
-        self.colorSink = sink
+        self.colorObserver = observer
         self.disposables.append(
             signal
             .throttle(0.25, onScheduler: QueueScheduler.mainQueueScheduler)
@@ -124,7 +124,7 @@ class ChampionCollectionViewController : UICollectionViewController, UINavigatio
     
     private func assignRandomMagicColor() {
         let colorIndex = Int(rand()) % self.magicColors.count
-        sendNext(colorSink, self.magicColors[colorIndex])
+        colorObserver.sendNext(self.magicColors[colorIndex])
     }
     
     private func initialize() {
@@ -212,8 +212,8 @@ class ChampionCollectionViewDataSource : NSObject, UICollectionViewDataSource, U
                     cursor = championCursor
                 }
 
-            sendNext(observer, (count, cursor))
-            sendCompleted(observer)
+            observer.sendNext((count, cursor))
+            observer.sendCompleted()
         }.startOn(dataDragonDatabaseScheduler)
     }
     

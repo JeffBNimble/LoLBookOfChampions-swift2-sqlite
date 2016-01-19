@@ -150,8 +150,8 @@ class ChampionSkinCollectionViewDataSource : NSObject, UICollectionViewDataSourc
                 cursor = championSkinCursor
             }
 
-            sendNext(observer, (count, cursor))
-            sendCompleted(observer)
+            observer.sendNext((count, cursor))
+            observer.sendCompleted()
         }.startOn(dataDragonDatabaseScheduler)
     }
     
