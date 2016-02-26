@@ -4,5 +4,5 @@ github "JeffBNimble/swift-protocols-sqlite" == 0.0.13
 github "JeffBNimble/swift-protocols-core" == 0.0.7
 github "CocoaLumberjack/CocoaLumberjack" "a7d670fce1750bfe06ecbc244ccf381d2240c5d6"
 github "JeffBNimble/lol-datadragon-content-provider" == 0.0.17
-github "ReactiveCocoa/ReactiveCocoa" "v4.0.0-RC.1"
+github "ReactiveCocoa/ReactiveCocoa" == 4.0.1
 github "appsquickly/Typhoon" == 3.4.5

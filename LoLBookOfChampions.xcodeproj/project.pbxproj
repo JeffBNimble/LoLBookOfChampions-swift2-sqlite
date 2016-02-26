@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		10E5B38686FC366FE0740254 /* Pods_LoLBookOfChampions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DABBDBFE2F5D83BED1E4F2 /* Pods_LoLBookOfChampions.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		54C1804902F4FADC8E9319D9 /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C181354250BEFC7CECE4BC /* Actions.swift */; };
-		A506732B1B92978400448777 /* ChampionSkinCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A506732A1B92978400448777 /* ChampionSkinCollectionViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		A50B42BD1B8F2373007CD2AC /* Signals.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50B42BC1B8F2373007CD2AC /* Signals.swift */; settings = {ASSET_TAGS = (); }; };
+		54C1860E5E2D6777D6B11218 /* LoLChampionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C1882BCB50619E505EEF05 /* LoLChampionsSpec.swift */; };
+		A506732B1B92978400448777 /* ChampionSkinCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A506732A1B92978400448777 /* ChampionSkinCollectionViewController.swift */; };
+		A50B42BD1B8F2373007CD2AC /* Signals.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50B42BC1B8F2373007CD2AC /* Signals.swift */; };
 		A5771ADA1B80BC8D00CD4E70 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5771ACE1B80BC8D00CD4E70 /* Alamofire.framework */; };
 		A5771ADC1B80BC8D00CD4E70 /* CocoaLumberjackSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5771AD01B80BC8D00CD4E70 /* CocoaLumberjackSwift.framework */; };
 		A5771ADD1B80BC8D00CD4E70 /* fmdbframework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5771AD11B80BC8D00CD4E70 /* fmdbframework.framework */; };
@@ -48,6 +49,11 @@
 		A59F55471B881D3C00022E74 /* SwiftAdaptersFMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A53C34BF1B8816E500786EAD /* SwiftAdaptersFMDB.framework */; };
 		A59F554C1B88AAE000022E74 /* TyphoonContentProviderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59F554B1B88AAE000022E74 /* TyphoonContentProviderFactory.swift */; };
 		A59F554F1B88BEDF00022E74 /* DataDragon.plist in Resources */ = {isa = PBXBuildFile; fileRef = A59F554E1B88BEDF00022E74 /* DataDragon.plist */; };
+		A5B4994E1C7E954200DA89B5 /* LoLBookOfChampionsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B4994D1C7E954200DA89B5 /* LoLBookOfChampionsUITests.swift */; };
+		A5B499591C7E95AA00DA89B5 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5B499571C7E95AA00DA89B5 /* Nimble.framework */; };
+		A5B4995A1C7E95AA00DA89B5 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5B499581C7E95AA00DA89B5 /* Quick.framework */; };
+		A5B4995C1C7E95F200DA89B5 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5B499571C7E95AA00DA89B5 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A5B4995D1C7E95F200DA89B5 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5B499581C7E95AA00DA89B5 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A5D3B0971B2FBE8300693C09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D3B0961B2FBE8300693C09 /* AppDelegate.swift */; };
 		A5D3B09C1B2FBE8300693C09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5D3B09A1B2FBE8300693C09 /* Main.storyboard */; };
 		A5D3B0A11B2FBE8300693C09 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5D3B09F1B2FBE8300693C09 /* LaunchScreen.xib */; };
@@ -69,6 +75,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = A53D10991B5B45990071984E;
 			remoteInfo = SwiftAdaptersFMDBTests;
+		};
+		A5B499501C7E954200DA89B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5D3B0891B2FBE8300693C09 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A5D3B0901B2FBE8300693C09;
+			remoteInfo = LoLBookOfChampions;
 		};
 		A5D3B0A71B2FBE8300693C09 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -101,12 +114,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A5B4995B1C7E95C700DA89B5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A5B4995C1C7E95F200DA89B5 /* Nimble.framework in CopyFiles */,
+				A5B4995D1C7E95F200DA89B5 /* Quick.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		140A812125737AA6AC7B06C1 /* Pods-LoLBookOfChampions.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoLBookOfChampions.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoLBookOfChampions/Pods-LoLBookOfChampions.debug.xcconfig"; sourceTree = "<group>"; };
 		16DABBDBFE2F5D83BED1E4F2 /* Pods_LoLBookOfChampions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoLBookOfChampions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54C181354250BEFC7CECE4BC /* Actions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
+		54C1882BCB50619E505EEF05 /* LoLChampionsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoLChampionsSpec.swift; sourceTree = "<group>"; };
 		817912CE85F853832185BD36 /* Pods-LoLBookOfChampionsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoLBookOfChampionsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoLBookOfChampionsTests/Pods-LoLBookOfChampionsTests.release.xcconfig"; sourceTree = "<group>"; };
 		96DEE882BA24069F3C3EB983 /* Pods-LoLBookOfChampions.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoLBookOfChampions.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoLBookOfChampions/Pods-LoLBookOfChampions.release.xcconfig"; sourceTree = "<group>"; };
 		A1761F2F276F64DA245B5BFD /* Pods_LoLBookOfChampionsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoLBookOfChampionsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,6 +176,11 @@
 		A59F55451B881D2700022E74 /* SwiftAdaptersFMDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftAdaptersFMDB.framework; path = Carthage/Build/iOS/SwiftAdaptersFMDB.framework; sourceTree = "<group>"; };
 		A59F554B1B88AAE000022E74 /* TyphoonContentProviderFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TyphoonContentProviderFactory.swift; sourceTree = "<group>"; };
 		A59F554E1B88BEDF00022E74 /* DataDragon.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DataDragon.plist; sourceTree = "<group>"; };
+		A5B4994B1C7E954200DA89B5 /* LoLBookOfChampionsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoLBookOfChampionsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5B4994D1C7E954200DA89B5 /* LoLBookOfChampionsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoLBookOfChampionsUITests.swift; sourceTree = "<group>"; };
+		A5B4994F1C7E954200DA89B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5B499571C7E95AA00DA89B5 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		A5B499581C7E95AA00DA89B5 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		A5D3B0911B2FBE8300693C09 /* LoLBookOfChampions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoLBookOfChampions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5D3B0951B2FBE8300693C09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5D3B0961B2FBE8300693C09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -163,6 +193,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A5B499481C7E954200DA89B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5B499591C7E95AA00DA89B5 /* Nimble.framework in Frameworks */,
+				A5B4995A1C7E95AA00DA89B5 /* Quick.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A5D3B08E1B2FBE8300693C09 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -262,6 +301,16 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		A5B4994C1C7E954200DA89B5 /* LoLBookOfChampionsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A5B4994D1C7E954200DA89B5 /* LoLBookOfChampionsUITests.swift */,
+				A5B4994F1C7E954200DA89B5 /* Info.plist */,
+				54C1882BCB50619E505EEF05 /* LoLChampionsSpec.swift */,
+			);
+			path = LoLBookOfChampionsUITests;
+			sourceTree = "<group>";
+		};
 		A5D3B0881B2FBE8300693C09 = {
 			isa = PBXGroup;
 			children = (
@@ -279,6 +328,7 @@
 				A5771AF51B80C46D00CD4E70 /* Typhoon.framework.dSYM */,
 				A5D3B0931B2FBE8300693C09 /* LoLBookOfChampions */,
 				A5D3B0A91B2FBE8300693C09 /* LoLBookOfChampionsTests */,
+				A5B4994C1C7E954200DA89B5 /* LoLBookOfChampionsUITests */,
 				A5D3B0921B2FBE8300693C09 /* Products */,
 				6E54EF91259F91CA1505B97D /* Pods */,
 				D21DCE71F4088158E1B3EFD3 /* Frameworks */,
@@ -290,6 +340,7 @@
 			children = (
 				A5D3B0911B2FBE8300693C09 /* LoLBookOfChampions.app */,
 				A5D3B0A61B2FBE8300693C09 /* LoLBookOfChampionsTests.xctest */,
+				A5B4994B1C7E954200DA89B5 /* LoLBookOfChampionsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -336,6 +387,8 @@
 		D21DCE71F4088158E1B3EFD3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A5B499571C7E95AA00DA89B5 /* Nimble.framework */,
+				A5B499581C7E95AA00DA89B5 /* Quick.framework */,
 				A59F55451B881D2700022E74 /* SwiftAdaptersFMDB.framework */,
 				A5771B101B81298500CD4E70 /* SpriteKit.framework */,
 				A5771B0E1B81292C00CD4E70 /* SceneKit.framework */,
@@ -360,6 +413,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A5B4994A1C7E954200DA89B5 /* LoLBookOfChampionsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5B499561C7E954200DA89B5 /* Build configuration list for PBXNativeTarget "LoLBookOfChampionsUITests" */;
+			buildPhases = (
+				A5B499471C7E954200DA89B5 /* Sources */,
+				A5B499481C7E954200DA89B5 /* Frameworks */,
+				A5B499491C7E954200DA89B5 /* Resources */,
+				A5B4995B1C7E95C700DA89B5 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A5B499511C7E954200DA89B5 /* PBXTargetDependency */,
+			);
+			name = LoLBookOfChampionsUITests;
+			productName = LoLBookOfChampionsUITests;
+			productReference = A5B4994B1C7E954200DA89B5 /* LoLBookOfChampionsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		A5D3B0901B2FBE8300693C09 /* LoLBookOfChampions */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A5D3B0B01B2FBE8300693C09 /* Build configuration list for PBXNativeTarget "LoLBookOfChampions" */;
@@ -409,10 +481,14 @@
 		A5D3B0891B2FBE8300693C09 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0700;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = NimbleNoggin.io;
 				TargetAttributes = {
+					A5B4994A1C7E954200DA89B5 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = A5D3B0901B2FBE8300693C09;
+					};
 					A5D3B0901B2FBE8300693C09 = {
 						CreatedOnToolsVersion = 6.3.2;
 						DevelopmentTeam = FB4Z23VQUS;
@@ -444,6 +520,7 @@
 			targets = (
 				A5D3B0901B2FBE8300693C09 /* LoLBookOfChampions */,
 				A5D3B0A51B2FBE8300693C09 /* LoLBookOfChampionsTests */,
+				A5B4994A1C7E954200DA89B5 /* LoLBookOfChampionsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -466,6 +543,13 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A5B499491C7E954200DA89B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A5D3B08F1B2FBE8300693C09 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -608,6 +692,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A5B499471C7E954200DA89B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5B4994E1C7E954200DA89B5 /* LoLBookOfChampionsUITests.swift in Sources */,
+				54C1860E5E2D6777D6B11218 /* LoLChampionsSpec.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A5D3B08D1B2FBE8300693C09 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -635,6 +728,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		A5B499511C7E954200DA89B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A5D3B0901B2FBE8300693C09 /* LoLBookOfChampions */;
+			targetProxy = A5B499501C7E954200DA89B5 /* PBXContainerItemProxy */;
+		};
 		A5D3B0A81B2FBE8300693C09 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A5D3B0901B2FBE8300693C09 /* LoLBookOfChampions */;
@@ -664,6 +762,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A5B499521C7E954200DA89B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = LoLBookOfChampionsUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.nimblenoggin.LoLBookOfChampionsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LoLBookOfChampions;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		A5B499531C7E954200DA89B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = LoLBookOfChampionsUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.nimblenoggin.LoLBookOfChampionsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LoLBookOfChampions;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
 		A5D3B0AE1B2FBE8300693C09 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -700,7 +834,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -739,7 +873,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -828,6 +962,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A5B499561C7E954200DA89B5 /* Build configuration list for PBXNativeTarget "LoLBookOfChampionsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5B499521C7E954200DA89B5 /* Debug */,
+				A5B499531C7E954200DA89B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A5D3B08C1B2FBE8300693C09 /* Build configuration list for PBXProject "LoLBookOfChampions" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

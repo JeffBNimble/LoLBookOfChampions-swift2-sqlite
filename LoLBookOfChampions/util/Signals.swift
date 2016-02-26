@@ -10,6 +10,7 @@ import Foundation
 import SwiftContentProvider
 import SwiftProtocolsSQLite
 import ReactiveCocoa
+import Result
 
 private class AppContentObserver : ContentObserver {
     private let observer : Observer<(Uri, ContentOperation), NoError>

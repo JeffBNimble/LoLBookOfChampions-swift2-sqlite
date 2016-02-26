@@ -1,5 +1,5 @@
 # Uncomment this line to define a global platform for your project
-platform :ios, '8.0'
+platform :ios, '9.0'
 use_frameworks!
 
 target :LoLBookOfChampions, :exclusive => true do
@@ -7,5 +7,9 @@ target :LoLBookOfChampions, :exclusive => true do
 end
 
 target :LoLBookOfChampionsTests, :exclusive => true do
+
+end
+
+target :LoLBookOfChampionsUITests, :exclusive => true do
 
 end

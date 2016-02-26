@@ -14,6 +14,7 @@ import SceneKit
 import SpriteKit
 import SwiftContentProvider
 import SwiftProtocolsSQLite
+import Result
 
 class ChampionCell : UICollectionViewCell {
     @IBOutlet weak var championImageView : UIImageView!
