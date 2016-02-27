@@ -54,6 +54,7 @@
 		A5B4995A1C7E95AA00DA89B5 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5B499581C7E95AA00DA89B5 /* Quick.framework */; };
 		A5B4995C1C7E95F200DA89B5 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5B499571C7E95AA00DA89B5 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A5B4995D1C7E95F200DA89B5 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5B499581C7E95AA00DA89B5 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A5B4996D1C81E65500DA89B5 /* NimbleNogginConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B4996C1C81E65500DA89B5 /* NimbleNogginConfiguration.swift */; };
 		A5D3B0971B2FBE8300693C09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D3B0961B2FBE8300693C09 /* AppDelegate.swift */; };
 		A5D3B09C1B2FBE8300693C09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5D3B09A1B2FBE8300693C09 /* Main.storyboard */; };
 		A5D3B0A11B2FBE8300693C09 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5D3B09F1B2FBE8300693C09 /* LaunchScreen.xib */; };
@@ -181,6 +182,7 @@
 		A5B4994F1C7E954200DA89B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5B499571C7E95AA00DA89B5 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		A5B499581C7E95AA00DA89B5 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		A5B4996C1C81E65500DA89B5 /* NimbleNogginConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NimbleNogginConfiguration.swift; sourceTree = "<group>"; };
 		A5D3B0911B2FBE8300693C09 /* LoLBookOfChampions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoLBookOfChampions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5D3B0951B2FBE8300693C09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5D3B0961B2FBE8300693C09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -304,11 +306,20 @@
 		A5B4994C1C7E954200DA89B5 /* LoLBookOfChampionsUITests */ = {
 			isa = PBXGroup;
 			children = (
+				A5B4996B1C81E65500DA89B5 /* util */,
 				A5B4994D1C7E954200DA89B5 /* LoLBookOfChampionsUITests.swift */,
 				A5B4994F1C7E954200DA89B5 /* Info.plist */,
 				54C1882BCB50619E505EEF05 /* LoLChampionsSpec.swift */,
 			);
 			path = LoLBookOfChampionsUITests;
+			sourceTree = "<group>";
+		};
+		A5B4996B1C81E65500DA89B5 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				A5B4996C1C81E65500DA89B5 /* NimbleNogginConfiguration.swift */,
+			);
+			path = util;
 			sourceTree = "<group>";
 		};
 		A5D3B0881B2FBE8300693C09 = {
@@ -696,6 +707,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5B4996D1C81E65500DA89B5 /* NimbleNogginConfiguration.swift in Sources */,
 				A5B4994E1C7E954200DA89B5 /* LoLBookOfChampionsUITests.swift in Sources */,
 				54C1860E5E2D6777D6B11218 /* LoLChampionsSpec.swift in Sources */,
 			);
@@ -774,7 +786,7 @@
 				INFOPLIST_FILE = LoLBookOfChampionsUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.nimblenoggin.LoLBookOfChampionsUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = io.nimblenoggin.LoLBookOfChampionsSwiftUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = LoLBookOfChampions;
 				USES_XCTRUNNER = YES;
@@ -791,7 +803,7 @@
 				INFOPLIST_FILE = LoLBookOfChampionsUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.nimblenoggin.LoLBookOfChampionsUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = io.nimblenoggin.LoLBookOfChampionsSwiftUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = LoLBookOfChampions;
 				USES_XCTRUNNER = YES;

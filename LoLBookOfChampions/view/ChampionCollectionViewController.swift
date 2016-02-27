@@ -73,24 +73,24 @@ class ChampionCollectionViewController : UICollectionViewController, UINavigatio
         self.collectionView?.dataSource = self.dataSource
         self.collectionView?.delegate = self.dataSource
         
-        self.magicView = SKView(frame: self.view.frame)
-        self.magicView.asynchronous = true
-        self.view.addSubview(self.magicView)
-        self.view.sendSubviewToBack(self.magicView)
-
-        // Create (and observe) the signal that generates random colors
-        let (signal, observer) = Signal<UIColor, NoError>.pipe()
-        self.colorSignal = signal
-        self.colorObserver = observer
-        self.disposables.append(
-            signal
-            .throttle(0.25, onScheduler: QueueScheduler.mainQueueScheduler)
-            .observeNext() { color in
-                self.presentMagicParticleScene(color)
-            }!
-        )
-
-        self.assignRandomMagicColor()
+//        self.magicView = SKView(frame: self.view.frame)
+//        self.magicView.asynchronous = true
+//        self.view.addSubview(self.magicView)
+//        self.view.sendSubviewToBack(self.magicView)
+//
+//        // Create (and observe) the signal that generates random colors
+//        let (signal, observer) = Signal<UIColor, NoError>.pipe()
+//        self.colorSignal = signal
+//        self.colorObserver = observer
+//        self.disposables.append(
+//            signal
+//            .throttle(0.25, onScheduler: QueueScheduler.mainQueueScheduler)
+//            .observeNext() { color in
+//                self.presentMagicParticleScene(color)
+//            }!
+//        )
+//
+//        self.assignRandomMagicColor()
         
         // Setup the signals, starting with the signal that fires when the initial content is available
         self.disposables.append(
