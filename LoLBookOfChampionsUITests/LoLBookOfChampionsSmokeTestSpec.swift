@@ -8,7 +8,7 @@ import Quick
 import Nimble
 import XCTest
 
-class LoLChampionsSpec : QuickSpec {
+class LoLBookOfChampionsSmokeTestSpec : QuickSpec {
     var app : XCUIApplication!
     var navigationBar : XCUIElement {
         get {
@@ -41,36 +41,38 @@ class LoLChampionsSpec : QuickSpec {
     }
     
     override func spec() {
-        describe("Given that I am on the LoL Champion Browser screen") {
+        describe("Given that I am using the LoL Book of Champions app") {
             beforeEach {
                 self.continueAfterFailure = false
                 self.app = XCUIApplication()
                 self.app.launch()
             }
 
-            it("Then I can scroll the list of champions until I see Ziggs") {
-                var done = false
-                while !done {
-                    if self.isChampionVisible("Ziggs", collectionView: self.championBrowserCollectionView) {
-                        done = true
-                        continue
-                    }
+            context("when I am on the champion browser screen") {
+                it("then I can scroll the list of champions until I see Ziggs") {
+                    var done = false
+                    while !done {
+                        if self.isChampionVisible("Ziggs", collectionView: self.championBrowserCollectionView) {
+                            done = true
+                            continue
+                        }
                     
-                    self.app.swipeUp()
-                }
+                        self.app.swipeUp()
+                    }
                 
-                expect(self.championCell("Ziggs", collectionView:self.championBrowserCollectionView).exists).to(beTrue())
+                    expect(self.championCell("Ziggs", collectionView:self.championBrowserCollectionView).exists).to(beTrue())
+                }
+            
+                it("then I can tap on Annie and see Annie's skins") {
+                    self.championBrowserCollectionView.staticTexts["Annie"].tap()
+                    self.waitFor(self.championSkinCell("default", collectionView: self.championSkinsBrowserCollectionView))
+                    expect(self.championSkinCell("default", collectionView: self.championSkinsBrowserCollectionView).exists).to(beTrue())
+                }
             }
             
-            it("Then I can tap on Annie and see Annie's skins") {
-                self.championBrowserCollectionView.staticTexts["Annie"].tap()
-                self.waitFor(self.championSkinCell("default", collectionView: self.championSkinsBrowserCollectionView))
-                expect(self.championSkinCell("default", collectionView: self.championSkinsBrowserCollectionView).exists).to(beTrue())
-            }
+            context("when I am on the champion skins browser screen") {
             
-            context("When I am on the champion skins browser screen") {
-            
-                it("Then I can scroll through Annie's skins") {
+                it("then I can scroll through Annie's skins") {
                     self.championBrowserCollectionView.staticTexts["Annie"].tap()
                     self.waitFor(self.championSkinCell("default", collectionView: self.championSkinsBrowserCollectionView))
                     
@@ -87,7 +89,7 @@ class LoLChampionsSpec : QuickSpec {
                     expect(self.championSkinCell("Sweetheart Annie", collectionView: self.championSkinsBrowserCollectionView).exists).to(beTrue())
                 }
                 
-                it("Then I can tap the back button to go back to the Champions Browser") {
+                it("then I can tap the back button to go back to the Champions Browser") {
                     self.championBrowserCollectionView.staticTexts["Annie"].tap()
                     self.waitFor(self.championSkinCell("default", collectionView: self.championSkinsBrowserCollectionView))
                     

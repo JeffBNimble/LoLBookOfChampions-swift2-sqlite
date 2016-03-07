@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		10E5B38686FC366FE0740254 /* Pods_LoLBookOfChampions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DABBDBFE2F5D83BED1E4F2 /* Pods_LoLBookOfChampions.framework */; };
 		54C1804902F4FADC8E9319D9 /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C181354250BEFC7CECE4BC /* Actions.swift */; };
-		54C1860E5E2D6777D6B11218 /* LoLChampionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C1882BCB50619E505EEF05 /* LoLChampionsSpec.swift */; };
+		54C1860E5E2D6777D6B11218 /* LoLBookOfChampionsSmokeTestSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C1882BCB50619E505EEF05 /* LoLBookOfChampionsSmokeTestSpec.swift */; };
 		A506732B1B92978400448777 /* ChampionSkinCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A506732A1B92978400448777 /* ChampionSkinCollectionViewController.swift */; };
 		A50B42BD1B8F2373007CD2AC /* Signals.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50B42BC1B8F2373007CD2AC /* Signals.swift */; };
 		A5771ADA1B80BC8D00CD4E70 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5771ACE1B80BC8D00CD4E70 /* Alamofire.framework */; };
@@ -132,7 +132,7 @@
 		140A812125737AA6AC7B06C1 /* Pods-LoLBookOfChampions.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoLBookOfChampions.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoLBookOfChampions/Pods-LoLBookOfChampions.debug.xcconfig"; sourceTree = "<group>"; };
 		16DABBDBFE2F5D83BED1E4F2 /* Pods_LoLBookOfChampions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoLBookOfChampions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54C181354250BEFC7CECE4BC /* Actions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
-		54C1882BCB50619E505EEF05 /* LoLChampionsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoLChampionsSpec.swift; sourceTree = "<group>"; };
+		54C1882BCB50619E505EEF05 /* LoLBookOfChampionsSmokeTestSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoLBookOfChampionsSmokeTestSpec.swift; sourceTree = "<group>"; };
 		817912CE85F853832185BD36 /* Pods-LoLBookOfChampionsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoLBookOfChampionsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoLBookOfChampionsTests/Pods-LoLBookOfChampionsTests.release.xcconfig"; sourceTree = "<group>"; };
 		96DEE882BA24069F3C3EB983 /* Pods-LoLBookOfChampions.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoLBookOfChampions.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoLBookOfChampions/Pods-LoLBookOfChampions.release.xcconfig"; sourceTree = "<group>"; };
 		A1761F2F276F64DA245B5BFD /* Pods_LoLBookOfChampionsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoLBookOfChampionsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -307,9 +307,9 @@
 			isa = PBXGroup;
 			children = (
 				A5B4996B1C81E65500DA89B5 /* util */,
-				A5B4994D1C7E954200DA89B5 /* LoLBookOfChampionsSmokeTests.swift */,
 				A5B4994F1C7E954200DA89B5 /* Info.plist */,
-				54C1882BCB50619E505EEF05 /* LoLChampionsSpec.swift */,
+				A5B4994D1C7E954200DA89B5 /* LoLBookOfChampionsSmokeTests.swift */,
+				54C1882BCB50619E505EEF05 /* LoLBookOfChampionsSmokeTestSpec.swift */,
 			);
 			path = LoLBookOfChampionsUITests;
 			sourceTree = "<group>";
@@ -709,7 +709,7 @@
 			files = (
 				A5B4996D1C81E65500DA89B5 /* NimbleNogginConfiguration.swift in Sources */,
 				A5B4994E1C7E954200DA89B5 /* LoLBookOfChampionsSmokeTests.swift in Sources */,
-				54C1860E5E2D6777D6B11218 /* LoLChampionsSpec.swift in Sources */,
+				54C1860E5E2D6777D6B11218 /* LoLBookOfChampionsSmokeTestSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
