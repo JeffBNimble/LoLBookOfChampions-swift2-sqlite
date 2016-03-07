@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		10E5B38686FC366FE0740254 /* Pods_LoLBookOfChampions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DABBDBFE2F5D83BED1E4F2 /* Pods_LoLBookOfChampions.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		10E5B38686FC366FE0740254 /* Pods_LoLBookOfChampions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DABBDBFE2F5D83BED1E4F2 /* Pods_LoLBookOfChampions.framework */; };
 		54C1804902F4FADC8E9319D9 /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C181354250BEFC7CECE4BC /* Actions.swift */; };
 		54C1860E5E2D6777D6B11218 /* LoLChampionsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C1882BCB50619E505EEF05 /* LoLChampionsSpec.swift */; };
 		A506732B1B92978400448777 /* ChampionSkinCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A506732A1B92978400448777 /* ChampionSkinCollectionViewController.swift */; };
@@ -49,7 +49,7 @@
 		A59F55471B881D3C00022E74 /* SwiftAdaptersFMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A53C34BF1B8816E500786EAD /* SwiftAdaptersFMDB.framework */; };
 		A59F554C1B88AAE000022E74 /* TyphoonContentProviderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59F554B1B88AAE000022E74 /* TyphoonContentProviderFactory.swift */; };
 		A59F554F1B88BEDF00022E74 /* DataDragon.plist in Resources */ = {isa = PBXBuildFile; fileRef = A59F554E1B88BEDF00022E74 /* DataDragon.plist */; };
-		A5B4994E1C7E954200DA89B5 /* LoLBookOfChampionsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B4994D1C7E954200DA89B5 /* LoLBookOfChampionsUITests.swift */; };
+		A5B4994E1C7E954200DA89B5 /* LoLBookOfChampionsSmokeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B4994D1C7E954200DA89B5 /* LoLBookOfChampionsSmokeTests.swift */; };
 		A5B499591C7E95AA00DA89B5 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5B499571C7E95AA00DA89B5 /* Nimble.framework */; };
 		A5B4995A1C7E95AA00DA89B5 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5B499581C7E95AA00DA89B5 /* Quick.framework */; };
 		A5B4995C1C7E95F200DA89B5 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5B499571C7E95AA00DA89B5 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -178,7 +178,7 @@
 		A59F554B1B88AAE000022E74 /* TyphoonContentProviderFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TyphoonContentProviderFactory.swift; sourceTree = "<group>"; };
 		A59F554E1B88BEDF00022E74 /* DataDragon.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DataDragon.plist; sourceTree = "<group>"; };
 		A5B4994B1C7E954200DA89B5 /* LoLBookOfChampionsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoLBookOfChampionsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A5B4994D1C7E954200DA89B5 /* LoLBookOfChampionsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoLBookOfChampionsUITests.swift; sourceTree = "<group>"; };
+		A5B4994D1C7E954200DA89B5 /* LoLBookOfChampionsSmokeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoLBookOfChampionsSmokeTests.swift; sourceTree = "<group>"; };
 		A5B4994F1C7E954200DA89B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5B499571C7E95AA00DA89B5 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		A5B499581C7E95AA00DA89B5 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
@@ -307,7 +307,7 @@
 			isa = PBXGroup;
 			children = (
 				A5B4996B1C81E65500DA89B5 /* util */,
-				A5B4994D1C7E954200DA89B5 /* LoLBookOfChampionsUITests.swift */,
+				A5B4994D1C7E954200DA89B5 /* LoLBookOfChampionsSmokeTests.swift */,
 				A5B4994F1C7E954200DA89B5 /* Info.plist */,
 				54C1882BCB50619E505EEF05 /* LoLChampionsSpec.swift */,
 			);
@@ -708,7 +708,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5B4996D1C81E65500DA89B5 /* NimbleNogginConfiguration.swift in Sources */,
-				A5B4994E1C7E954200DA89B5 /* LoLBookOfChampionsUITests.swift in Sources */,
+				A5B4994E1C7E954200DA89B5 /* LoLBookOfChampionsSmokeTests.swift in Sources */,
 				54C1860E5E2D6777D6B11218 /* LoLChampionsSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

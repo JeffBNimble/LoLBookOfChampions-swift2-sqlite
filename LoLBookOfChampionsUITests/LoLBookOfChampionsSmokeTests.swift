@@ -1,5 +1,5 @@
 //
-//  LoLBookOfChampionsUITests.swift
+//  LoLBookOfChampionsSmokeTests.swift
 //  LoLBookOfChampionsUITests
 //
 //  Created by Jeff Roberts on 2/24/16.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class LoLBookOfChampionsUITests: XCTestCase {
+class LoLBookOfChampionsSmokeTests: XCTestCase {
     var app : XCUIApplication!
     var navigationBar : XCUIElement {
         get {
