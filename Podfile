@@ -2,14 +2,14 @@
 platform :ios, '9.0'
 use_frameworks!
 
-target :LoLBookOfChampions, :exclusive => true do
+target :LoLBookOfChampions do
   pod 'AFNetworking', '2.5.4'
 end
 
-target :LoLBookOfChampionsTests, :exclusive => true do
+target :LoLBookOfChampionsTests do
 
 end
 
-target :LoLBookOfChampionsUITests, :exclusive => true do
+target :LoLBookOfChampionsUITests do
 
 end

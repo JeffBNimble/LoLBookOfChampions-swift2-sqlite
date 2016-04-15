@@ -7,14 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		10E5B38686FC366FE0740254 /* Pods_LoLBookOfChampions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DABBDBFE2F5D83BED1E4F2 /* Pods_LoLBookOfChampions.framework */; };
+		41A1EAA1A2BE6C688972B646 /* Pods_LoLBookOfChampions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3C50D3BF6050185704F33A2 /* Pods_LoLBookOfChampions.framework */; };
 		54C1804902F4FADC8E9319D9 /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C181354250BEFC7CECE4BC /* Actions.swift */; };
 		54C1860E5E2D6777D6B11218 /* LoLBookOfChampionsSmokeTestSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C1882BCB50619E505EEF05 /* LoLBookOfChampionsSmokeTestSpec.swift */; };
+		882C6A09F9F6A4A53E2130EE /* Pods_LoLBookOfChampionsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 150F4382949D0D7375193CD3 /* Pods_LoLBookOfChampionsTests.framework */; };
+		A5002DA11CC0714700AE9ECC /* FMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5002DA01CC0714700AE9ECC /* FMDB.framework */; };
+		A5002DA31CC0727900AE9ECC /* FMDB.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5002DA21CC0727900AE9ECC /* FMDB.framework.dSYM */; };
 		A506732B1B92978400448777 /* ChampionSkinCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A506732A1B92978400448777 /* ChampionSkinCollectionViewController.swift */; };
 		A50B42BD1B8F2373007CD2AC /* Signals.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50B42BC1B8F2373007CD2AC /* Signals.swift */; };
 		A5771ADA1B80BC8D00CD4E70 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5771ACE1B80BC8D00CD4E70 /* Alamofire.framework */; };
 		A5771ADC1B80BC8D00CD4E70 /* CocoaLumberjackSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5771AD01B80BC8D00CD4E70 /* CocoaLumberjackSwift.framework */; };
-		A5771ADD1B80BC8D00CD4E70 /* fmdbframework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5771AD11B80BC8D00CD4E70 /* fmdbframework.framework */; };
 		A5771ADE1B80BC8D00CD4E70 /* LoLDataDragonContentProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5771AD21B80BC8D00CD4E70 /* LoLDataDragonContentProvider.framework */; };
 		A5771ADF1B80BC8D00CD4E70 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5771AD31B80BC8D00CD4E70 /* ReactiveCocoa.framework */; };
 		A5771AE01B80BC8D00CD4E70 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5771AD41B80BC8D00CD4E70 /* Result.framework */; };
@@ -26,7 +28,6 @@
 		A5771AF61B80C46D00CD4E70 /* Alamofire.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5771AEA1B80C46D00CD4E70 /* Alamofire.framework.dSYM */; };
 		A5771AF71B80C46D00CD4E70 /* CocoaLumberjack.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5771AEB1B80C46D00CD4E70 /* CocoaLumberjack.framework.dSYM */; };
 		A5771AF81B80C46D00CD4E70 /* CocoaLumberjackSwift.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5771AEC1B80C46D00CD4E70 /* CocoaLumberjackSwift.framework.dSYM */; };
-		A5771AF91B80C46D00CD4E70 /* fmdbframework.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5771AED1B80C46D00CD4E70 /* fmdbframework.framework.dSYM */; };
 		A5771AFA1B80C46D00CD4E70 /* LoLDataDragonContentProvider.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5771AEE1B80C46D00CD4E70 /* LoLDataDragonContentProvider.framework.dSYM */; };
 		A5771AFB1B80C46D00CD4E70 /* ReactiveCocoa.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5771AEF1B80C46D00CD4E70 /* ReactiveCocoa.framework.dSYM */; };
 		A5771AFC1B80C46D00CD4E70 /* Result.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = A5771AF01B80C46D00CD4E70 /* Result.framework.dSYM */; };
@@ -59,7 +60,7 @@
 		A5D3B09C1B2FBE8300693C09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5D3B09A1B2FBE8300693C09 /* Main.storyboard */; };
 		A5D3B0A11B2FBE8300693C09 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5D3B09F1B2FBE8300693C09 /* LaunchScreen.xib */; };
 		A5D3B0AD1B2FBE8300693C09 /* LoLBookOfChampionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D3B0AC1B2FBE8300693C09 /* LoLBookOfChampionsTests.swift */; };
-		BEFB930B8105BB28D97AE8D5 /* Pods_LoLBookOfChampionsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1761F2F276F64DA245B5BFD /* Pods_LoLBookOfChampionsTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		D1586379742D014A021928A6 /* Pods_LoLBookOfChampionsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 868D275AE5DA6E924B0209A3 /* Pods_LoLBookOfChampionsUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,10 +101,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				A5002DA31CC0727900AE9ECC /* FMDB.framework.dSYM in CopyFiles */,
 				A5771AF61B80C46D00CD4E70 /* Alamofire.framework.dSYM in CopyFiles */,
 				A5771AF71B80C46D00CD4E70 /* CocoaLumberjack.framework.dSYM in CopyFiles */,
 				A5771AF81B80C46D00CD4E70 /* CocoaLumberjackSwift.framework.dSYM in CopyFiles */,
-				A5771AF91B80C46D00CD4E70 /* fmdbframework.framework.dSYM in CopyFiles */,
 				A5771AFA1B80C46D00CD4E70 /* LoLDataDragonContentProvider.framework.dSYM in CopyFiles */,
 				A5771AFB1B80C46D00CD4E70 /* ReactiveCocoa.framework.dSYM in CopyFiles */,
 				A5771AFC1B80C46D00CD4E70 /* Result.framework.dSYM in CopyFiles */,
@@ -129,13 +130,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		140A812125737AA6AC7B06C1 /* Pods-LoLBookOfChampions.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoLBookOfChampions.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoLBookOfChampions/Pods-LoLBookOfChampions.debug.xcconfig"; sourceTree = "<group>"; };
-		16DABBDBFE2F5D83BED1E4F2 /* Pods_LoLBookOfChampions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoLBookOfChampions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		150F4382949D0D7375193CD3 /* Pods_LoLBookOfChampionsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoLBookOfChampionsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41E77383FE2FF77A21A5BFDC /* Pods-LoLBookOfChampionsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoLBookOfChampionsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoLBookOfChampionsTests/Pods-LoLBookOfChampionsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		504A91466F6EB10FAD34EB1F /* Pods-LoLBookOfChampions.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoLBookOfChampions.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoLBookOfChampions/Pods-LoLBookOfChampions.release.xcconfig"; sourceTree = "<group>"; };
 		54C181354250BEFC7CECE4BC /* Actions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
 		54C1882BCB50619E505EEF05 /* LoLBookOfChampionsSmokeTestSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoLBookOfChampionsSmokeTestSpec.swift; sourceTree = "<group>"; };
-		817912CE85F853832185BD36 /* Pods-LoLBookOfChampionsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoLBookOfChampionsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoLBookOfChampionsTests/Pods-LoLBookOfChampionsTests.release.xcconfig"; sourceTree = "<group>"; };
-		96DEE882BA24069F3C3EB983 /* Pods-LoLBookOfChampions.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoLBookOfChampions.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoLBookOfChampions/Pods-LoLBookOfChampions.release.xcconfig"; sourceTree = "<group>"; };
-		A1761F2F276F64DA245B5BFD /* Pods_LoLBookOfChampionsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoLBookOfChampionsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D1CE2462D369CC698A39842 /* Pods-LoLBookOfChampionsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoLBookOfChampionsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoLBookOfChampionsUITests/Pods-LoLBookOfChampionsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		868D275AE5DA6E924B0209A3 /* Pods_LoLBookOfChampionsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoLBookOfChampionsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		879779F8CD4BECB477371060 /* Pods-LoLBookOfChampions.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoLBookOfChampions.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoLBookOfChampions/Pods-LoLBookOfChampions.debug.xcconfig"; sourceTree = "<group>"; };
+		A5002DA01CC0714700AE9ECC /* FMDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FMDB.framework; path = Carthage/Build/iOS/FMDB.framework; sourceTree = "<group>"; };
+		A5002DA21CC0727900AE9ECC /* FMDB.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = FMDB.framework.dSYM; path = Carthage/Build/iOS/FMDB.framework.dSYM; sourceTree = "<group>"; };
 		A506732A1B92978400448777 /* ChampionSkinCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChampionSkinCollectionViewController.swift; sourceTree = "<group>"; };
 		A50B42BC1B8F2373007CD2AC /* Signals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signals.swift; sourceTree = "<group>"; };
 		A53C34B91B8816E500786EAD /* SwiftAdaptersFMDB.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftAdaptersFMDB.xcodeproj; path = "Carthage/Checkouts/swift-adapters-fmdb/SwiftAdaptersFMDB.xcodeproj"; sourceTree = "<group>"; };
@@ -191,7 +195,9 @@
 		A5D3B0A61B2FBE8300693C09 /* LoLBookOfChampionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoLBookOfChampionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5D3B0AB1B2FBE8300693C09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5D3B0AC1B2FBE8300693C09 /* LoLBookOfChampionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoLBookOfChampionsTests.swift; sourceTree = "<group>"; };
-		DB1ED2ECF917FF3716FDBB22 /* Pods-LoLBookOfChampionsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoLBookOfChampionsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoLBookOfChampionsTests/Pods-LoLBookOfChampionsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AFD8E08316971A95FB8FFC51 /* Pods-LoLBookOfChampionsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoLBookOfChampionsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoLBookOfChampionsUITests/Pods-LoLBookOfChampionsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D6C084A5B64708D3BDA6B853 /* Pods-LoLBookOfChampionsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoLBookOfChampionsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoLBookOfChampionsTests/Pods-LoLBookOfChampionsTests.release.xcconfig"; sourceTree = "<group>"; };
+		E3C50D3BF6050185704F33A2 /* Pods_LoLBookOfChampions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoLBookOfChampions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +207,7 @@
 			files = (
 				A5B499591C7E95AA00DA89B5 /* Nimble.framework in Frameworks */,
 				A5B4995A1C7E95AA00DA89B5 /* Quick.framework in Frameworks */,
+				D1586379742D014A021928A6 /* Pods_LoLBookOfChampionsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +215,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5002DA11CC0714700AE9ECC /* FMDB.framework in Frameworks */,
 				A59F55471B881D3C00022E74 /* SwiftAdaptersFMDB.framework in Frameworks */,
 				A5771B061B80E74200CD4E70 /* Foundation.framework in Frameworks */,
 				A5771B0F1B81292C00CD4E70 /* SceneKit.framework in Frameworks */,
@@ -216,14 +224,13 @@
 				A5771ADE1B80BC8D00CD4E70 /* LoLDataDragonContentProvider.framework in Frameworks */,
 				A5771AE41B80BC8D00CD4E70 /* SwiftProtocolsSQLite.framework in Frameworks */,
 				A5771ADC1B80BC8D00CD4E70 /* CocoaLumberjackSwift.framework in Frameworks */,
-				A5771ADD1B80BC8D00CD4E70 /* fmdbframework.framework in Frameworks */,
 				A5771AE01B80BC8D00CD4E70 /* Result.framework in Frameworks */,
 				A5771AE21B80BC8D00CD4E70 /* SwiftContentProvider.framework in Frameworks */,
 				A5771AE51B80BC8D00CD4E70 /* Typhoon.framework in Frameworks */,
-				10E5B38686FC366FE0740254 /* Pods_LoLBookOfChampions.framework in Frameworks */,
 				A5771ADF1B80BC8D00CD4E70 /* ReactiveCocoa.framework in Frameworks */,
 				A5771AE81B80C38500CD4E70 /* CocoaLumberjack.framework in Frameworks */,
 				A5771ADA1B80BC8D00CD4E70 /* Alamofire.framework in Frameworks */,
+				41A1EAA1A2BE6C688972B646 /* Pods_LoLBookOfChampions.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,7 +238,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEFB930B8105BB28D97AE8D5 /* Pods_LoLBookOfChampionsTests.framework in Frameworks */,
+				882C6A09F9F6A4A53E2130EE /* Pods_LoLBookOfChampionsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,10 +249,12 @@
 			isa = PBXGroup;
 			children = (
 				A53C34B91B8816E500786EAD /* SwiftAdaptersFMDB.xcodeproj */,
-				140A812125737AA6AC7B06C1 /* Pods-LoLBookOfChampions.debug.xcconfig */,
-				96DEE882BA24069F3C3EB983 /* Pods-LoLBookOfChampions.release.xcconfig */,
-				DB1ED2ECF917FF3716FDBB22 /* Pods-LoLBookOfChampionsTests.debug.xcconfig */,
-				817912CE85F853832185BD36 /* Pods-LoLBookOfChampionsTests.release.xcconfig */,
+				879779F8CD4BECB477371060 /* Pods-LoLBookOfChampions.debug.xcconfig */,
+				504A91466F6EB10FAD34EB1F /* Pods-LoLBookOfChampions.release.xcconfig */,
+				41E77383FE2FF77A21A5BFDC /* Pods-LoLBookOfChampionsTests.debug.xcconfig */,
+				D6C084A5B64708D3BDA6B853 /* Pods-LoLBookOfChampionsTests.release.xcconfig */,
+				6D1CE2462D369CC698A39842 /* Pods-LoLBookOfChampionsUITests.debug.xcconfig */,
+				AFD8E08316971A95FB8FFC51 /* Pods-LoLBookOfChampionsUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -325,6 +334,7 @@
 		A5D3B0881B2FBE8300693C09 = {
 			isa = PBXGroup;
 			children = (
+				A5002DA21CC0727900AE9ECC /* FMDB.framework.dSYM */,
 				A5771AEA1B80C46D00CD4E70 /* Alamofire.framework.dSYM */,
 				A5771AEB1B80C46D00CD4E70 /* CocoaLumberjack.framework.dSYM */,
 				A5771AEC1B80C46D00CD4E70 /* CocoaLumberjackSwift.framework.dSYM */,
@@ -398,14 +408,13 @@
 		D21DCE71F4088158E1B3EFD3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A5002DA01CC0714700AE9ECC /* FMDB.framework */,
 				A5B499571C7E95AA00DA89B5 /* Nimble.framework */,
 				A5B499581C7E95AA00DA89B5 /* Quick.framework */,
 				A59F55451B881D2700022E74 /* SwiftAdaptersFMDB.framework */,
 				A5771B101B81298500CD4E70 /* SpriteKit.framework */,
 				A5771B0E1B81292C00CD4E70 /* SceneKit.framework */,
 				A5771B051B80E74200CD4E70 /* Foundation.framework */,
-				16DABBDBFE2F5D83BED1E4F2 /* Pods_LoLBookOfChampions.framework */,
-				A1761F2F276F64DA245B5BFD /* Pods_LoLBookOfChampionsTests.framework */,
 				A5771ACE1B80BC8D00CD4E70 /* Alamofire.framework */,
 				A5771AE71B80C38500CD4E70 /* CocoaLumberjack.framework */,
 				A5771AD01B80BC8D00CD4E70 /* CocoaLumberjackSwift.framework */,
@@ -417,6 +426,9 @@
 				A5771AD71B80BC8D00CD4E70 /* SwiftProtocolsCore.framework */,
 				A5771AD81B80BC8D00CD4E70 /* SwiftProtocolsSQLite.framework */,
 				A5771AD91B80BC8D00CD4E70 /* Typhoon.framework */,
+				E3C50D3BF6050185704F33A2 /* Pods_LoLBookOfChampions.framework */,
+				150F4382949D0D7375193CD3 /* Pods_LoLBookOfChampionsTests.framework */,
+				868D275AE5DA6E924B0209A3 /* Pods_LoLBookOfChampionsUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -428,10 +440,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A5B499561C7E954200DA89B5 /* Build configuration list for PBXNativeTarget "LoLBookOfChampionsUITests" */;
 			buildPhases = (
+				43EA1F16208C70BA663DE10B /* 📦 Check Pods Manifest.lock */,
 				A5B499471C7E954200DA89B5 /* Sources */,
 				A5B499481C7E954200DA89B5 /* Frameworks */,
 				A5B499491C7E954200DA89B5 /* Resources */,
 				A5B4995B1C7E95C700DA89B5 /* CopyFiles */,
+				88B537C7B480F9146ECF0140 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -447,14 +461,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A5D3B0B01B2FBE8300693C09 /* Build configuration list for PBXNativeTarget "LoLBookOfChampions" */;
 			buildPhases = (
-				13DE558E8365AEBED80FFE03 /* Check Pods Manifest.lock */,
+				6642ABC926D73946B47F1BDA /* 📦 Check Pods Manifest.lock */,
 				A5D3B08D1B2FBE8300693C09 /* Sources */,
 				A5D3B08E1B2FBE8300693C09 /* Frameworks */,
 				A5D3B08F1B2FBE8300693C09 /* Resources */,
-				3F0C51540019C5BDDB179487 /* Embed Pods Frameworks */,
-				F058B72AB1689809050D8730 /* Copy Pods Resources */,
 				A5771AE61B80C26500CD4E70 /* ShellScript */,
 				A5771AE91B80C41E00CD4E70 /* CopyFiles */,
+				727CC5D6946544DBD793941B /* 📦 Embed Pods Frameworks */,
+				73EC6BF814ED36FF9EE64CCE /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -469,12 +483,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A5D3B0B31B2FBE8300693C09 /* Build configuration list for PBXNativeTarget "LoLBookOfChampionsTests" */;
 			buildPhases = (
-				228EDCFEA995EB27BDC18CE5 /* Check Pods Manifest.lock */,
+				E224E01D8A13F4E4E97DF419 /* 📦 Check Pods Manifest.lock */,
 				A5D3B0A21B2FBE8300693C09 /* Sources */,
 				A5D3B0A31B2FBE8300693C09 /* Frameworks */,
 				A5D3B0A41B2FBE8300693C09 /* Resources */,
-				B241B7F48F870FFADA5E9E7B /* Embed Pods Frameworks */,
-				2F9D31D90C6D1CF2276E1766 /* Copy Pods Resources */,
+				5EEE7F4F07F89522DF8C8A93 /* 📦 Embed Pods Frameworks */,
+				5F19330E774811BFB9B52DD7 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -585,14 +599,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		13DE558E8365AEBED80FFE03 /* Check Pods Manifest.lock */ = {
+		43EA1F16208C70BA663DE10B /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -600,29 +614,29 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		228EDCFEA995EB27BDC18CE5 /* Check Pods Manifest.lock */ = {
+		5EEE7F4F07F89522DF8C8A93 /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LoLBookOfChampionsTests/Pods-LoLBookOfChampionsTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2F9D31D90C6D1CF2276E1766 /* Copy Pods Resources */ = {
+		5F19330E774811BFB9B52DD7 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -630,19 +644,64 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LoLBookOfChampionsTests/Pods-LoLBookOfChampionsTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3F0C51540019C5BDDB179487 /* Embed Pods Frameworks */ = {
+		6642ABC926D73946B47F1BDA /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		727CC5D6946544DBD793941B /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LoLBookOfChampions/Pods-LoLBookOfChampions-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		73EC6BF814ED36FF9EE64CCE /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LoLBookOfChampions/Pods-LoLBookOfChampions-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		88B537C7B480F9146ECF0140 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LoLBookOfChampionsUITests/Pods-LoLBookOfChampionsUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A5771AE61B80C26500CD4E70 /* ShellScript */ = {
@@ -653,7 +712,7 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/CocoaLumberjackSwift.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/fmdbframework.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/FMDB.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/LoLDataDragonContentProvider.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
@@ -670,34 +729,19 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
-		B241B7F48F870FFADA5E9E7B /* Embed Pods Frameworks */ = {
+		E224E01D8A13F4E4E97DF419 /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LoLBookOfChampionsTests/Pods-LoLBookOfChampionsTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F058B72AB1689809050D8730 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LoLBookOfChampions/Pods-LoLBookOfChampions-resources.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -776,6 +820,7 @@
 /* Begin XCBuildConfiguration section */
 		A5B499521C7E954200DA89B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D1CE2462D369CC698A39842 /* Pods-LoLBookOfChampionsUITests.debug.xcconfig */;
 			buildSettings = {
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
@@ -795,6 +840,7 @@
 		};
 		A5B499531C7E954200DA89B5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFD8E08316971A95FB8FFC51 /* Pods-LoLBookOfChampionsUITests.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -895,7 +941,7 @@
 		};
 		A5D3B0B11B2FBE8300693C09 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 140A812125737AA6AC7B06C1 /* Pods-LoLBookOfChampions.debug.xcconfig */;
+			baseConfigurationReference = 879779F8CD4BECB477371060 /* Pods-LoLBookOfChampions.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -916,7 +962,7 @@
 		};
 		A5D3B0B21B2FBE8300693C09 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 96DEE882BA24069F3C3EB983 /* Pods-LoLBookOfChampions.release.xcconfig */;
+			baseConfigurationReference = 504A91466F6EB10FAD34EB1F /* Pods-LoLBookOfChampions.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -937,7 +983,7 @@
 		};
 		A5D3B0B41B2FBE8300693C09 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DB1ED2ECF917FF3716FDBB22 /* Pods-LoLBookOfChampionsTests.debug.xcconfig */;
+			baseConfigurationReference = 41E77383FE2FF77A21A5BFDC /* Pods-LoLBookOfChampionsTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -957,7 +1003,7 @@
 		};
 		A5D3B0B51B2FBE8300693C09 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 817912CE85F853832185BD36 /* Pods-LoLBookOfChampionsTests.release.xcconfig */;
+			baseConfigurationReference = D6C084A5B64708D3BDA6B853 /* Pods-LoLBookOfChampionsTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (

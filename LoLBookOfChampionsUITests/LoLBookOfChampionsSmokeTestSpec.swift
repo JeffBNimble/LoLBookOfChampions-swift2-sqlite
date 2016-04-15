@@ -8,7 +8,7 @@ import Quick
 import Nimble
 import XCTest
 
-class LoLBookOfChampionsSmokeTestSpec : QuickSpec {
+public class LoLBookOfChampionsSmokeTestSpec : QuickSpec {
     var app : XCUIApplication!
     var navigationBar : XCUIElement {
         get {
@@ -40,7 +40,7 @@ class LoLBookOfChampionsSmokeTestSpec : QuickSpec {
         }
     }
     
-    override func spec() {
+    public override func spec() {
         describe("Given that I am using the LoL Book of Champions app") {
             beforeEach {
                 self.continueAfterFailure = false
