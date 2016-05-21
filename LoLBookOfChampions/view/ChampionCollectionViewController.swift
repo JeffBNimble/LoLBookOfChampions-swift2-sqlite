@@ -7,13 +7,13 @@
 //
 
 import Foundation
-import CocoaLumberjackSwift
 import LoLDataDragonContentProvider
 import ReactiveCocoa
 import SceneKit
 import SpriteKit
 import SwiftContentProvider
 import SwiftProtocolsSQLite
+import SwiftyBeaver
 import Result
 
 class ChampionCell : UICollectionViewCell {
@@ -156,6 +156,8 @@ class ChampionCollectionViewController : UICollectionViewController, UINavigatio
 }
 
 class ChampionCollectionViewDataSource : NSObject, UICollectionViewDataSource, UICollectionViewDelegate {
+    private let logger = SwiftyBeaver.self
+
     static let COLUMN_ROW_COUNT = "row_count"
     
     var championProjection : [String] {
@@ -232,7 +234,7 @@ class ChampionCollectionViewDataSource : NSObject, UICollectionViewDataSource, U
     // MARK: UICollectionViewDelegate methods
     func collectionView(collectionView: UICollectionView, willDisplayCell cell: UICollectionViewCell, forItemAtIndexPath indexPath: NSIndexPath) {
         guard self.championCursor != nil && self.championCursor.moveToPosition(indexPath.row) else {
-            DDLogError("Unable to move cursor \(self.championCursor) to \(indexPath.row)")
+            logger.error("Unable to move cursor \(self.championCursor) to \(indexPath.row)")
             return
         }
         

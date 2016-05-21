@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import CocoaLumberjackSwift
 import LoLDataDragonContentProvider
 import SwiftContentProvider
 import Typhoon
@@ -19,12 +18,6 @@ class CoreAssembly : TyphoonAssembly {
     
     dynamic func bundleIdentifier() -> AnyObject {
         return TyphoonDefinition.withFactory(self.mainBundle(), selector: "bundleIdentifier")
-    }
-    
-    dynamic func consoleLogger() -> AnyObject {
-        return TyphoonDefinition.withClass(DDTTYLogger.self) { definition in
-            definition.useInitializer("sharedInstance")
-        }
     }
     
     dynamic func contentProviderFactory() -> AnyObject {

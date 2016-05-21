@@ -10,14 +10,326 @@
    <Group
       location = "container:"
       name = "Frameworks">
+      <Group
+         location = "group:Carthage/Build/iOS/ReactiveCocoa.framework"
+         name = "ReactiveCocoa.framework">
+         <Group
+            location = "group:Headers"
+            name = "Headers">
+            <FileRef
+               location = "group:EXTKeyPathCoding.h">
+            </FileRef>
+            <FileRef
+               location = "group:EXTScope.h">
+            </FileRef>
+            <FileRef
+               location = "group:metamacros.h">
+            </FileRef>
+            <FileRef
+               location = "group:MKAnnotationView+RACSignalSupport.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSArray+RACSequenceAdditions.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSData+RACSupport.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSDictionary+RACSequenceAdditions.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSEnumerator+RACSequenceAdditions.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSFileHandle+RACSupport.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSIndexSet+RACSequenceAdditions.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSNotificationCenter+RACSupport.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSObject+RACDeallocating.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSObject+RACLifting.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSObject+RACPropertySubscribing.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSObject+RACSelectorSignal.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSOrderedSet+RACSequenceAdditions.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSSet+RACSequenceAdditions.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSString+RACSequenceAdditions.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSString+RACSupport.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSURLConnection+RACSupport.h">
+            </FileRef>
+            <FileRef
+               location = "group:NSUserDefaults+RACSupport.h">
+            </FileRef>
+            <FileRef
+               location = "group:RACBehaviorSubject.h">
+            </FileRef>
+            <FileRef
+               location = "group:RACChannel.h">
+            </FileRef>
+            <FileRef
+               location = "group:RACCommand.h">
+            </FileRef>
+            <FileRef
+               location = "group:RACCompoundDisposable.h">
+            </FileRef>
+            <FileRef
+               location = "group:RACDisposable.h">
+            </FileRef>
+            <FileRef
+               location = "group:RACDynamicPropertySuperclass.h">
+            </FileRef>
+            <FileRef
+               location = "group:RACEvent.h">
+            </FileRef>
+            <FileRef
+               location = "group:RACGroupedSignal.h">
+            </FileRef>
+            <FileRef
+               location = "group:RACKVOChannel.h">
+            </FileRef>
+            <FileRef
+               location = "group:RACMulticastConnection.h">
+            </FileRef>
+            <FileRef
+               location = "group:RACQueueScheduler+Subclass.h">
+            </FileRef>
+            <FileRef
+               location = "group:RACQueueScheduler.h">
+            </FileRef>
+            <FileRef
+               location = "group:RACReplaySubject.h">
+            </FileRef>
+            <FileRef
+               location = "group:RACScheduler+Subclass.h">
+            </FileRef>
+            <FileRef
+               location = "group:RACScheduler.h">
+            </FileRef>
+            <FileRef
+               location = "group:RACScopedDisposable.h">
+            </FileRef>
+            <FileRef
+               location = "group:RACSequence.h">
+            </FileRef>
+            <FileRef
+               location = "group:RACSerialDisposable.h">
+            </FileRef>
+            <FileRef
+               location = "group:RACSignal+Operations.h">
+            </FileRef>
+            <FileRef
+               location = "group:RACSignal.h">
+            </FileRef>
+            <FileRef
+               location = "group:RACStream.h">
+            </FileRef>
+            <FileRef
+               location = "group:RACSubject.h">
+            </FileRef>
+            <FileRef
+               location = "group:RACSubscriber.h">
+            </FileRef>
+            <FileRef
+               location = "group:RACSubscriptingAssignmentTrampoline.h">
+            </FileRef>
+            <FileRef
+               location = "group:RACTargetQueueScheduler.h">
+            </FileRef>
+            <FileRef
+               location = "group:RACTestScheduler.h">
+            </FileRef>
+            <FileRef
+               location = "group:RACTuple.h">
+            </FileRef>
+            <FileRef
+               location = "group:RACUnit.h">
+            </FileRef>
+            <FileRef
+               location = "group:ReactiveCocoa-Swift.h">
+            </FileRef>
+            <FileRef
+               location = "group:ReactiveCocoa.h">
+            </FileRef>
+            <FileRef
+               location = "group:UIActionSheet+RACSignalSupport.h">
+            </FileRef>
+            <FileRef
+               location = "group:UIAlertView+RACSignalSupport.h">
+            </FileRef>
+            <FileRef
+               location = "group:UIBarButtonItem+RACCommandSupport.h">
+            </FileRef>
+            <FileRef
+               location = "group:UIButton+RACCommandSupport.h">
+            </FileRef>
+            <FileRef
+               location = "group:UICollectionReusableView+RACSignalSupport.h">
+            </FileRef>
+            <FileRef
+               location = "group:UIControl+RACSignalSupport.h">
+            </FileRef>
+            <FileRef
+               location = "group:UIDatePicker+RACSignalSupport.h">
+            </FileRef>
+            <FileRef
+               location = "group:UIGestureRecognizer+RACSignalSupport.h">
+            </FileRef>
+            <FileRef
+               location = "group:UIImagePickerController+RACSignalSupport.h">
+            </FileRef>
+            <FileRef
+               location = "group:UIRefreshControl+RACCommandSupport.h">
+            </FileRef>
+            <FileRef
+               location = "group:UISegmentedControl+RACSignalSupport.h">
+            </FileRef>
+            <FileRef
+               location = "group:UISlider+RACSignalSupport.h">
+            </FileRef>
+            <FileRef
+               location = "group:UIStepper+RACSignalSupport.h">
+            </FileRef>
+            <FileRef
+               location = "group:UISwitch+RACSignalSupport.h">
+            </FileRef>
+            <FileRef
+               location = "group:UITableViewCell+RACSignalSupport.h">
+            </FileRef>
+            <FileRef
+               location = "group:UITableViewHeaderFooterView+RACSignalSupport.h">
+            </FileRef>
+            <FileRef
+               location = "group:UITextField+RACSignalSupport.h">
+            </FileRef>
+            <FileRef
+               location = "group:UITextView+RACSignalSupport.h">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:Info.plist">
+         </FileRef>
+         <Group
+            location = "group:Modules"
+            name = "Modules">
+            <FileRef
+               location = "group:module.modulemap">
+            </FileRef>
+            <Group
+               location = "group:ReactiveCocoa.swiftmodule"
+               name = "ReactiveCocoa.swiftmodule">
+               <FileRef
+                  location = "group:arm.swiftdoc">
+               </FileRef>
+               <FileRef
+                  location = "group:arm.swiftmodule">
+               </FileRef>
+               <FileRef
+                  location = "group:arm64.swiftdoc">
+               </FileRef>
+               <FileRef
+                  location = "group:arm64.swiftmodule">
+               </FileRef>
+               <FileRef
+                  location = "group:i386.swiftdoc">
+               </FileRef>
+               <FileRef
+                  location = "group:i386.swiftmodule">
+               </FileRef>
+               <FileRef
+                  location = "group:x86_64.swiftdoc">
+               </FileRef>
+               <FileRef
+                  location = "group:x86_64.swiftmodule">
+               </FileRef>
+            </Group>
+         </Group>
+         <Group
+            location = "group:PrivateHeaders"
+            name = "PrivateHeaders">
+            <FileRef
+               location = "group:EXTRuntimeExtensions.h">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:ReactiveCocoa">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:Carthage/Build/iOS/Result.framework"
+         name = "Result.framework">
+         <Group
+            location = "group:Headers"
+            name = "Headers">
+            <FileRef
+               location = "group:Result-Swift.h">
+            </FileRef>
+            <FileRef
+               location = "group:Result.h">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:Info.plist">
+         </FileRef>
+         <Group
+            location = "group:Modules"
+            name = "Modules">
+            <FileRef
+               location = "group:module.modulemap">
+            </FileRef>
+            <Group
+               location = "group:Result.swiftmodule"
+               name = "Result.swiftmodule">
+               <FileRef
+                  location = "group:arm.swiftdoc">
+               </FileRef>
+               <FileRef
+                  location = "group:arm.swiftmodule">
+               </FileRef>
+               <FileRef
+                  location = "group:arm64.swiftdoc">
+               </FileRef>
+               <FileRef
+                  location = "group:arm64.swiftmodule">
+               </FileRef>
+               <FileRef
+                  location = "group:i386.swiftdoc">
+               </FileRef>
+               <FileRef
+                  location = "group:i386.swiftmodule">
+               </FileRef>
+               <FileRef
+                  location = "group:x86_64.swiftdoc">
+               </FileRef>
+               <FileRef
+                  location = "group:x86_64.swiftmodule">
+               </FileRef>
+            </Group>
+         </Group>
+         <FileRef
+            location = "group:Result">
+         </FileRef>
+      </Group>
       <FileRef
          location = "group:Carthage/Checkouts/lol-datadragon-content-provider/LoLDataDragonContentProvider.xcodeproj">
-      </FileRef>
-      <FileRef
-         location = "group:Carthage/Checkouts/ReactiveCocoa/ReactiveCocoa.xcodeproj">
-      </FileRef>
-      <FileRef
-         location = "group:Carthage/Checkouts/Result/Result.xcodeproj">
       </FileRef>
       <FileRef
          location = "group:Carthage/Checkouts/swift-adapters-fmdb/SwiftAdaptersFMDB.xcodeproj">

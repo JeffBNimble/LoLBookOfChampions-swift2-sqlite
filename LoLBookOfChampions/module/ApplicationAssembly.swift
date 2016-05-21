@@ -31,7 +31,6 @@ class ApplicationAssembly : TyphoonAssembly {
             definition.injectProperty("backgroundQueue", with: backgroundDispatchQueue)
             definition.injectProperty("dataDragonDatabaseQueue", with: dataDragonDatabaseQueue)
             definition.injectProperty("dataDragon", with: self.dataDragon.dataDragon())
-            definition.injectProperty("loggers", with: [self.core.consoleLogger()])
         }
     }
     

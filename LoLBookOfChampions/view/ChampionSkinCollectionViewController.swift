@@ -7,11 +7,11 @@
 //
 
 import Foundation
-import CocoaLumberjackSwift
 import LoLDataDragonContentProvider
 import ReactiveCocoa
 import SwiftContentProvider
 import SwiftProtocolsSQLite
+import SwiftyBeaver
 
 class ChampionSkinCell : UICollectionViewCell {
     @IBOutlet weak var skinImageView : UIImageView!
@@ -98,6 +98,7 @@ class ChampionSkinCollectionViewController : UICollectionViewController {
 
 class ChampionSkinCollectionViewDataSource : NSObject, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     private static let COLUMN_ROW_COUNT = "row_count"
+    private let logger = SwiftyBeaver.self
     
     var championId : Int!
     
@@ -173,7 +174,7 @@ class ChampionSkinCollectionViewDataSource : NSObject, UICollectionViewDataSourc
     // MARK: UICollectionViewDelegate methods
     func collectionView(collectionView: UICollectionView, willDisplayCell cell: UICollectionViewCell, forItemAtIndexPath indexPath: NSIndexPath) {
         guard self.skinCursor != nil && self.skinCursor.moveToPosition(indexPath.row) else {
-            DDLogError("Unable to move cursor \(self.skinCursor) to \(indexPath.row)")
+            logger.error("Unable to move cursor \(self.skinCursor) to \(indexPath.row)")
             return
         }
         

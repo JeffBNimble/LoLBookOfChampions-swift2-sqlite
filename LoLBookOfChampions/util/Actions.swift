@@ -4,10 +4,10 @@
 //
 
 import Foundation
-import CocoaLumberjackSwift
 import LoLDataDragonContentProvider
 import ReactiveCocoa
 import SwiftProtocolsSQLite
+import SwiftyBeaver
 
 extension AppDelegate {
     func dataDragonSyncAction() -> Action<Void, Void, SQLError> {
@@ -16,7 +16,7 @@ extension AppDelegate {
                 do {
                     try self.dataDragon.sync()
                 } catch {
-                    DDLogError("An error occurred attempting to sync Data Dragon: \(error)")
+                    self.logger.error("An error occurred attempting to sync Data Dragon: \(error)")
                     observer.sendFailed(error as! SQLError)
                 }
                 observer.sendCompleted()

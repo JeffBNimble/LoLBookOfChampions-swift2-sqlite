@@ -7,15 +7,16 @@
 //
 
 import UIKit
-import CocoaLumberjackSwift
 import LoLDataDragonContentProvider
 import ReactiveCocoa
 import SwiftContentProvider
 import SwiftProtocolsSQLite
+import SwiftyBeaver
 
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    let logger = SwiftyBeaver.self
 
     var backgroundQueue : dispatch_queue_t! {
         didSet {
@@ -33,12 +34,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private var dataDragonDatabaseScheduler : QueueScheduler!
     var dataDragon : DataDragon!
-    var loggers : [DDLogger]?
     var window : UIWindow?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         self.initializeApplication()
-        DDLogInfo("The application has been initialized")
+        logger.debug("The application has been initialized")
         return true
     }
 
@@ -85,13 +85,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func initializeLogger() {
-        guard let loggers = loggers else {
-            return
-        }
-        
-        loggers.forEach() { logger in
-            DDLog.addLogger(logger)
-        }
+        let consoleDestination = ConsoleDestination()
+        consoleDestination.minLevel = .Debug
+        consoleDestination.colored = false
+
+        logger.addDestination(consoleDestination)
     }
 
     private func syncDataDragon() {
@@ -102,7 +100,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.dataDragonSyncAction()
             .apply(())
             .startWithCompleted() {
-                DDLogInfo("Completed data dragon sync")
+                self.logger.info("Completed data dragon sync")
             }
         })
     }
