@@ -156,7 +156,7 @@ class ChampionCollectionViewController : UICollectionViewController, UINavigatio
 }
 
 class ChampionCollectionViewDataSource : NSObject, UICollectionViewDataSource, UICollectionViewDelegate {
-    private let logger = SwiftyBeaver.self
+    let logger = SwiftyBeaver.self
 
     static let COLUMN_ROW_COUNT = "row_count"
     

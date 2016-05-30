@@ -1,4 +1,4 @@
 github "JeffBNimble/swift-adapters-fmdb" == 0.0.15
-github "JeffBNimble/lol-datadragon-content-provider" == 0.0.19
+github "JeffBNimble/lol-datadragon-content-provider" == 0.0.20
 github "ReactiveCocoa/ReactiveCocoa" == 4.1
 github "appsquickly/Typhoon" == 3.4.5

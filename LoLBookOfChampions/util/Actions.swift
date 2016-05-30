@@ -14,6 +14,7 @@ extension AppDelegate {
         return Action<Void, Void, SQLError>() { input in
             return SignalProducer<Void, SQLError>() { observer, disposable in
                 do {
+                    self.logger.debug("DataDragon sync started")
                     try self.dataDragon.sync()
                 } catch {
                     self.logger.error("An error occurred attempting to sync Data Dragon: \(error)")
@@ -26,6 +27,7 @@ extension AppDelegate {
 }
 
 extension ChampionCollectionViewDataSource {
+    
     private var championCountProjection: [String] {
         get {
             return ["count(*) as \(ChampionCollectionViewDataSource.COLUMN_ROW_COUNT)"]
@@ -44,6 +46,7 @@ extension ChampionCollectionViewDataSource {
                             sort: "\(DataDragonDatabase.Champion.Columns.name)")
                     observer.sendNext(cursor)
                 } catch {
+                    self.logger.error("An error occurred attempting to query champions: \(error)")
                     observer.sendFailed(error as! SQLError)
                 }
             }
@@ -72,6 +75,7 @@ extension ChampionCollectionViewDataSource {
                     observer.sendCompleted()
 
                 } catch {
+                    self.logger.error("An error occurred attempting to query champion count: \(error)")
                     observer.sendFailed(error as! SQLError)
                 }
             }

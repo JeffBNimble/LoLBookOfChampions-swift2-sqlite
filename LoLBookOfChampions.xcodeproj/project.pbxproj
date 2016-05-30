@@ -386,12 +386,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A5B499561C7E954200DA89B5 /* Build configuration list for PBXNativeTarget "LoLBookOfChampionsUITests" */;
 			buildPhases = (
-				43EA1F16208C70BA663DE10B /* 📦 Check Pods Manifest.lock */,
+				8C41E6F444755958931ABE55 /* 📦 Check Pods Manifest.lock */,
+				43EA1F16208C70BA663DE10B /* uD83DuDCE6 Check Pods Manifest.lock */,
 				A5B499471C7E954200DA89B5 /* Sources */,
 				A5B499481C7E954200DA89B5 /* Frameworks */,
 				A5B499491C7E954200DA89B5 /* Resources */,
 				A5B4995B1C7E95C700DA89B5 /* CopyFiles */,
-				88B537C7B480F9146ECF0140 /* 📦 Copy Pods Resources */,
+				88B537C7B480F9146ECF0140 /* uD83DuDCE6 Copy Pods Resources */,
+				328334277BE28B9B7A98BCE0 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -407,14 +409,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A5D3B0B01B2FBE8300693C09 /* Build configuration list for PBXNativeTarget "LoLBookOfChampions" */;
 			buildPhases = (
-				6642ABC926D73946B47F1BDA /* 📦 Check Pods Manifest.lock */,
+				4D553C59DE189EA5FB0510A5 /* 📦 Check Pods Manifest.lock */,
+				6642ABC926D73946B47F1BDA /* uD83DuDCE6 Check Pods Manifest.lock */,
 				A5D3B08D1B2FBE8300693C09 /* Sources */,
 				A5D3B08E1B2FBE8300693C09 /* Frameworks */,
 				A5D3B08F1B2FBE8300693C09 /* Resources */,
 				A5771AE61B80C26500CD4E70 /* ShellScript */,
 				A5771AE91B80C41E00CD4E70 /* CopyFiles */,
-				727CC5D6946544DBD793941B /* 📦 Embed Pods Frameworks */,
-				73EC6BF814ED36FF9EE64CCE /* 📦 Copy Pods Resources */,
+				727CC5D6946544DBD793941B /* uD83DuDCE6 Embed Pods Frameworks */,
+				73EC6BF814ED36FF9EE64CCE /* uD83DuDCE6 Copy Pods Resources */,
+				852E901B97B307BDFCB325F5 /* 📦 Embed Pods Frameworks */,
+				F54485DC0AAD34B719C38DAA /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -429,12 +434,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A5D3B0B31B2FBE8300693C09 /* Build configuration list for PBXNativeTarget "LoLBookOfChampionsTests" */;
 			buildPhases = (
-				E224E01D8A13F4E4E97DF419 /* 📦 Check Pods Manifest.lock */,
+				3AA49EA9001070893C77DCBD /* 📦 Check Pods Manifest.lock */,
+				E224E01D8A13F4E4E97DF419 /* uD83DuDCE6 Check Pods Manifest.lock */,
 				A5D3B0A21B2FBE8300693C09 /* Sources */,
 				A5D3B0A31B2FBE8300693C09 /* Frameworks */,
 				A5D3B0A41B2FBE8300693C09 /* Resources */,
-				5EEE7F4F07F89522DF8C8A93 /* 📦 Embed Pods Frameworks */,
-				5F19330E774811BFB9B52DD7 /* 📦 Copy Pods Resources */,
+				5EEE7F4F07F89522DF8C8A93 /* uD83DuDCE6 Embed Pods Frameworks */,
+				5F19330E774811BFB9B52DD7 /* uD83DuDCE6 Copy Pods Resources */,
+				316F0112CF224B5B412779B2 /* 📦 Embed Pods Frameworks */,
+				2C4DC1BFED1DDC5046A1AE89 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -545,44 +553,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		43EA1F16208C70BA663DE10B /* 📦 Check Pods Manifest.lock */ = {
+		2C4DC1BFED1DDC5046A1AE89 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "\uD83D\uDCE6 Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		5EEE7F4F07F89522DF8C8A93 /* 📦 Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "\uD83D\uDCE6 Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LoLBookOfChampionsTests/Pods-LoLBookOfChampionsTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5F19330E774811BFB9B52DD7 /* 📦 Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "\uD83D\uDCE6 Copy Pods Resources";
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -590,14 +568,44 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LoLBookOfChampionsTests/Pods-LoLBookOfChampionsTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6642ABC926D73946B47F1BDA /* 📦 Check Pods Manifest.lock */ = {
+		316F0112CF224B5B412779B2 /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "\uD83D\uDCE6 Check Pods Manifest.lock";
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LoLBookOfChampionsTests/Pods-LoLBookOfChampionsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		328334277BE28B9B7A98BCE0 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LoLBookOfChampionsUITests/Pods-LoLBookOfChampionsUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3AA49EA9001070893C77DCBD /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -605,14 +613,89 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		727CC5D6946544DBD793941B /* 📦 Embed Pods Frameworks */ = {
+		43EA1F16208C70BA663DE10B /* uD83DuDCE6 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "\uD83D\uDCE6 Embed Pods Frameworks";
+			name = "uD83DuDCE6 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4D553C59DE189EA5FB0510A5 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5EEE7F4F07F89522DF8C8A93 /* uD83DuDCE6 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "uD83DuDCE6 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LoLBookOfChampionsTests/Pods-LoLBookOfChampionsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F19330E774811BFB9B52DD7 /* uD83DuDCE6 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "uD83DuDCE6 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LoLBookOfChampionsTests/Pods-LoLBookOfChampionsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6642ABC926D73946B47F1BDA /* uD83DuDCE6 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "uD83DuDCE6 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		727CC5D6946544DBD793941B /* uD83DuDCE6 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "uD83DuDCE6 Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -620,14 +703,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LoLBookOfChampions/Pods-LoLBookOfChampions-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		73EC6BF814ED36FF9EE64CCE /* 📦 Copy Pods Resources */ = {
+		73EC6BF814ED36FF9EE64CCE /* uD83DuDCE6 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "\uD83D\uDCE6 Copy Pods Resources";
+			name = "uD83DuDCE6 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -635,19 +718,49 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LoLBookOfChampions/Pods-LoLBookOfChampions-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		88B537C7B480F9146ECF0140 /* 📦 Copy Pods Resources */ = {
+		852E901B97B307BDFCB325F5 /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "\uD83D\uDCE6 Copy Pods Resources";
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LoLBookOfChampions/Pods-LoLBookOfChampions-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		88B537C7B480F9146ECF0140 /* uD83DuDCE6 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "uD83DuDCE6 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LoLBookOfChampionsUITests/Pods-LoLBookOfChampionsUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C41E6F444755958931ABE55 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		A5771AE61B80C26500CD4E70 /* ShellScript */ = {
@@ -674,19 +787,34 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
-		E224E01D8A13F4E4E97DF419 /* 📦 Check Pods Manifest.lock */ = {
+		E224E01D8A13F4E4E97DF419 /* uD83DuDCE6 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "\uD83D\uDCE6 Check Pods Manifest.lock";
+			name = "uD83DuDCE6 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F54485DC0AAD34B719C38DAA /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LoLBookOfChampions/Pods-LoLBookOfChampions-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
